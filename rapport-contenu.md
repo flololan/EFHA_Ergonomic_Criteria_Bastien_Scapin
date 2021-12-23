@@ -39,3 +39,7 @@ Copier Coller
 # Page avec form
 
 Contact?
+- Prénom + Nom / Pseudo
+- Email
+- Telephone
+- Message
