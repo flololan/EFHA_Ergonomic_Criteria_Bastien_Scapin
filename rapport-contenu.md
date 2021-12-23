@@ -4,6 +4,7 @@ Resumé et autre?
 
 
 # Page avec méthodes
+## Searchbar
 
 Copier Coller
 
