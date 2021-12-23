@@ -1,4 +1,5 @@
 ### Todo 
+- URGENT: Demander la permission à Bastien
 - envoyer mail au enseignant regardant les skip-link cf: https://restapify.vercel.app/docs
 
 # Global features
