@@ -1,6 +1,6 @@
 # EFHA_Ergonomic_Criteria_Bastien_Scapin
 
---> [Strucutre du projet] https://github.com/flololan/EFHA_Ergonomic_Criteria_Bastien_Scapin/blob/main/rapport-contenu.md
+--> [Strucutre du projet](https://github.com/flololan/EFHA_Ergonomic_Criteria_Bastien_Scapin/blob/main/rapport-contenu.md)
 
 ### Objectifs pédagogiques du projet de réalisation d'un minisite et d'un exposéObjectifs pédagogiques du projet de réalisation d'un minisite et d'un exposé
 Mettre en pratique les connaissances acquises lors du cours.
