@@ -2,13 +2,17 @@
   "name": "efha-ergonomic-criteria-bastien-scapin",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "svelte-dev": "svelte-kit dev",
+    "dev": "run-s generate-index svelte-dev",
+    "svelte-build": "svelte-kit build",
+    "build": "run-s generate-index svelte-build",
     "package": "svelte-kit package",
-    "preview": "svelte-kit preview",
+    "svelte-preview": "svelte-kit preview",
+    "preview": "run-s generate-index svelte-preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "eslint --ignore-path .gitignore ."
+    "lint": "eslint --ignore-path .gitignore .",
+    "generate-index": "node --loader ts-node/esm src/scripts/generate-index.ts"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
@@ -26,8 +30,10 @@
     "svelte-check": "^2.2.6",
     "svelte-i18n": "^3.3.13",
     "svelte-preprocess": "^4.9.4",
+    "ts-node": "^10.4.0",
     "tslib": "^2.3.1",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.3",
+    "yarn-run-all": "^3.1.1"
   },
   "type": "module",
   "dependencies": {
