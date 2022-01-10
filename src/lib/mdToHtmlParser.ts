@@ -1,19 +1,16 @@
 import showdown from "showdown"
 
 const classMap = {
-  h1: 'mt-6 text-3xl font-bold',
-  h2: 'mt-4 text-2xl font-bold',
-  h3: 'mt-2 text-xl',
-  h4: 'mt-3',
-  ul: 'pl-2',
-  li: 'pl-2',
+  h3: 'mt-5',
+  h4: 'mt-4',
+  ul: 'list-group list-group-flush',
+  li: 'list-group-item',
   pre: 'rounded-2',
-  code: 'rounded p-1 bg-black text-white',
   blockquote: 'alert alert-warning',
   table: 'table table-striped',
-  img: 'w-100'
+  img: 'w-100',
+  code: 'rounded p-1 bg-black text-white'
 }
-
 const classInjectionExt = Object.keys(classMap)
   .map(key => ({
     type: 'output',
