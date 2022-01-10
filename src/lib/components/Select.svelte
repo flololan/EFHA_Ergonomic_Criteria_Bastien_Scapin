@@ -27,10 +27,10 @@
 </script>
 
 <div
-  class={`select relative group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none bg-white shadow-sm text-gray-900 cursor-pointer flex items-center ${className}`}
+  class={`select position-relative btn btn-light btn-outline-primary d-flex justify-content-center align-items-center w-fit-content p-1 ${className}`}
   title="Update language"
 >
-  <select bind:value class="opacity-0 p-0 absolute w-full h-full">
+  <select bind:value class="opacity-0 p-0 position-absolute w-100 h-100">
     {#each selectOptions as { value, label }}
       <option {value}>{label}</option>
     {/each}
@@ -39,7 +39,7 @@
   {#if icon}
      <svelte:component this={icon} />
   {/if}
-  <span class="label ml-1">{selectedLabel}</span>
+  <span class="label ms-1">{selectedLabel}</span>
 </div>
 
 <style lang="scss">
