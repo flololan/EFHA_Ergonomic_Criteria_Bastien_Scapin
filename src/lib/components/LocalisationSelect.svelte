@@ -21,7 +21,7 @@
 </script>
 
 <Select 
-  class="locale-select position-absolute top-0 end-0 m-2 btn-outline-primary"
+  class="locale-select m-2 btn-outline-primary"
   bind:value={selectedLang}
   values={$locales.map(locale => {
     return {

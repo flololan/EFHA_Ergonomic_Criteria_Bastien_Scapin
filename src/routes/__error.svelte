@@ -14,17 +14,35 @@
 	<title>Error {status} • PAGENAME</title>
 </svelte:head>
 
-<div class=" flex items-center justify-center w-screen h-screen">
-  <div class="flex flex-col items-center">
-    <h1 class="font-bold text-7xl text-indigo-600">Error {status}</h1>
+<style>
+	h1 {
+		margin: 0 auto;
+	}
+	h1 {
+		font-size: 2.8em;
+		font-weight: 700;
+		margin: 0 0 0.5em 0;
+		text-align: center;
+	}
+	@media (min-width: 480px) {
+		h1 {
+			font-size: 4em;
+		}
+	}
+</style>
 
-    <p class="mb-2 text-2xl font-bold text-center text-gray-800">
-      <span class="text-red-500">Oops!</span> {error.message}
+
+<div class="d-flex mt-5 justify-content-center w-100 h-100">
+  <div class="d-flex flex-column align-items-center">
+    <h1 class="font-bold text-primary mb-2">Error {status}</h1>
+
+    <p class="mb-2 fs-2 font-bold text-center ">
+      <span class="text-danger">Oops!</span> {error.message}
     </p>
 
     <a
       href="/"
-      class="px-6 py-2 mt-6 text-sm font-semibold text-blue-800 bg-blue-100"
+      class="btn btn-outline-primary mt-5 w-fit-content fw-bold"
       >Go home</a
     >
   </div>
