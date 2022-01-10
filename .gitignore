@@ -3,7 +3,9 @@ node_modules
 /build
 /.svelte-kit
 /package
-.vscode/
+/.vscode
 .env
 .env.*
 !.env.example
+
+/static/content-index.json
