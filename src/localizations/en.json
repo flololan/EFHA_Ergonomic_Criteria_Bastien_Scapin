@@ -10,6 +10,7 @@
   "contact_page": {
     "required_field": "Fields with the symbol (*) are required!",
     "submit": "Send the message",
+    "currently": "Currently",
     "invalid_info": {
       "message_min_length": "Minimum {length} expected characters",
       "firstname": "Please enter a first name longer than {length} characters",

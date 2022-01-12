@@ -3,4 +3,6 @@ export const LANGUAGES = {
   fr: "Français"
 } as const
 
+export const EMAIL_REGEX = /[^@\s]+@[^@\s]+\.[^@\s]+/
+
 export const TITLE = 'is-ergonomic'
