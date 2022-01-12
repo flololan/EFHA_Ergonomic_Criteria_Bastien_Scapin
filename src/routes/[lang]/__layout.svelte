@@ -13,6 +13,4 @@
 
 <Navbar />
 
-<main id="mainContent">
-  <slot />
-</main>
+<slot />

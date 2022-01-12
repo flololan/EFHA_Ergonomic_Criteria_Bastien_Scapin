@@ -30,7 +30,7 @@
     $: html = getMdAsHtml(md, { pageSlug: location.pathname });
 </script>
 
-<article class="criteria px-5 pt-3">
+<article id="mainContent" class="criteria px-5 pt-3">
     {@html html}
 </article>
 
