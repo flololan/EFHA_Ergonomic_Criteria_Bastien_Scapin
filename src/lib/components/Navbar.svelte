@@ -1,8 +1,13 @@
-<script>
+<script lang="ts">
+  import { _ } from 'svelte-i18n'
+  import { TITLE } from '$lib/const'
+
   import LocalisationSelect from "./LocalisationSelect.svelte";
   import Links from "./Links.svelte";
 
   export let segment
+
+  $: logoAlt = $_('icon_alt', { values: { website: window.location.hostname }})
 </script>
 
 <style lang="scss">
@@ -42,8 +47,8 @@
 <nav class="navbar navbar-expand-lg px-md-4 pt-0 pb-0 navbar-light bg-light shadow">
   <div class="container-fluid">
     <a id="brand" rel="prefetch" class="p-0 d-flex align-contents-center link-dark" href="/">
-			<img src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Restapify icon">
-			<h1 class="d-none d-md-block ms-1 mb-0 fs-4">A title</h1>
+			<img src="/assets/icon.svg" class="p-2" alt={logoAlt}>
+			<h1 class="d-none d-md-block ms-1 mb-0 fs-4">{TITLE}</h1>
     </a>
     <ul class="d-flex ms-auto mb-0">
       <Links {segment} />

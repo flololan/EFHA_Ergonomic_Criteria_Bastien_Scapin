@@ -1,12 +1,8 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
-  import { locale, locales } from 'svelte-i18n'
-  import Globe2 from 'svelte-bootstrap-icons/lib/Globe2/Globe2.svelte'
+  import { locale } from 'svelte-i18n'
 
-  import Select from './Select.svelte'
-  import { LANGUAGES } from '$lib/const'
-
-  let selectedLang = $locale
+  $: selectedLang = $locale
   
   const getUrlWithUpdatedLang = (prevLang: string, newLang: string): string => {
     return `${location.href}/`.replace(`/${prevLang}/`, `/${newLang}/`)
@@ -20,22 +16,29 @@
   }
 </script>
 
-<Select 
-  class="locale-select m-2 btn-outline-primary"
-  bind:value={selectedLang}
-  values={$locales.map(locale => {
-    return {
-      label: LANGUAGES[locale],
-      value: locale
-    }
-  })}
-  icon={Globe2}
-/>
-
 <style>
-  @media screen and (max-width: 992px) {
-    :global(.locale-select .label) {
-      display: none;
-    }
+  img {
+    height: 1.3rem;
   }
 </style>
+
+<div class="btn-group ms-4" role="group" aria-label="select language">
+  <button 
+    type="button"
+    class="btn btn-outline-secondary p-1"
+    aria-label="french"
+    disabled={selectedLang === 'fr'}
+    on:click={() => selectedLang = 'fr'}
+  >
+    <img src="/assets/flag_fr.svg" alt="France flag"/>
+  </button>
+  <button
+    type="button"
+    class="btn btn-outline-secondary p-1"
+    aria-label="english"
+    disabled={selectedLang === 'en'}
+    on:click={() => selectedLang = 'en'}
+  >
+    <img src="/assets/flag_en.svg" alt="United Kingdom flag"/>
+  </button>
+</div>
