@@ -22,6 +22,10 @@ export type IndexEntry = {
     previous?: EntrySlug
 }
 
+export const getDirs = (p: string): string[] => {
+return fs.readdirSync(p).filter(f => fs.statSync(path.join(p, f)).isDirectory())
+}
+
 const getAllDirectories = function(dirPath: string, arrayOfDirectories: string[] = []) {
     const files = fs.readdirSync(dirPath)
     
@@ -114,13 +118,30 @@ const addLinks = (content: IndexEntry[]) => {
     })
 }
 
+const getHierarchy = (path: string, hierarchy = {}) => {
+    // @ts-ignore
+    hierarchy.slug = path
+    const dirs = getDirs(path)
+
+    // @ts-ignore
+    hierarchy.children = dirs.map(dirPath => {
+        return getHierarchy(path + '/' + dirPath)
+    })
+
+    return hierarchy
+}
+
 const main = () => {
+    /*
     const paths = getAllDirectories(SRC_DIR);
 
     const content = paths.reduce(getEntryFromPath, [] as IndexEntry[])
     addLinks(content) // in-place operation
 
-    fs.writeFileSync(DST_FILE, JSON.stringify(content, undefined, 2))    
+    fs.writeFileSync(DST_FILE, JSON.stringify(content, undefined, 2))
+    */
+
+    console.log(getHierarchy(SRC_DIR));
 }
 
 main()
