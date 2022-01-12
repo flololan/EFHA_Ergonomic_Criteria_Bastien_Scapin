@@ -38,7 +38,7 @@
 
 <nav class="doc-nav px-3 pt-4 border-end">
     <h2 class="pb-2">{$_("criteria")}</h2>
-    <ol class="ps-1 fs-5">
+    <ol class="ps-1 fs-5 text-nowrap">
         {#each navi as naviItem}
             <li>
                 <a href={buildUrl(naviItem)}>{naviItem.title[selectedLang]}</a>
