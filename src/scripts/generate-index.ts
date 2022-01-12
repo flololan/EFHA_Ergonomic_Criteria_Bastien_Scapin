@@ -52,16 +52,16 @@ const getContentFromPath = (acc: IndexEntry[], pathToFile: string): IndexEntry[]
 }
 
 const addLinks = (content: IndexEntry[]) => {
-    const addNextLink = (entry: IndexEntry, i: number, isChild = false, entries=content) => {
+    const addNextLink = (entry: IndexEntry, index: number, isChild = false, entries=content) => {
         if (entry.children) {
             entry.next = entry.children[0].slug
         } else if (isChild) {
-            const children = entries[i].children
+            const children = entries[index].children
             const childIndex = children.findIndex((e) => e.slug === entry.slug)
             const currentEntry = children[childIndex]
-            currentEntry.next = (childIndex + 1 < children.length) ? children[childIndex + 1].slug : undefined
-        } else if (i + 1 < entries.length) {
-            entry.next = entries[i+1].slug
+            currentEntry.next = (childIndex + 1 < children.length) ? children[childIndex + 1].slug : entries[index + 1].slug
+        } else if (index + 1 < entries.length) {
+            entry.next = entries[index+1].slug
         }
     }
 
@@ -70,21 +70,21 @@ const addLinks = (content: IndexEntry[]) => {
             const children = entries[index].children
             const childIndex = children.findIndex((e) => e.slug === entry.slug)
             const currentEntry = children[childIndex]
-            currentEntry.previous = (childIndex - 1 > 0) ? children[childIndex - 1].slug : entries[index].slug
+            currentEntry.previous = (childIndex - 1 >= 0) ? children[childIndex - 1].slug : entries[index].slug
         } else if (index > 0) {
             entry.previous = entries[index - 1].slug
         }
     }
 
     content.forEach((entry, i) => {
-        addNextLink(entry, i)
         addPreviousLink(entry, i)
+        addNextLink(entry, i)
 
         // Second level
         if (entry.children) {
             entry.children.forEach((entry) => {
-                addNextLink(entry, i, true)
                 addPreviousLink(entry, i, true)
+                addNextLink(entry, i, true)
             })
         }
     })
