@@ -18,7 +18,7 @@
 		class="nav-link"
 		class:active={segment === "deployment"}
 		rel="prefetch"
-		href={`/${$locale}/contacts`}>{$_("contact")}</a
+		href={`/${$locale}/contact`}>{$_("contact")}</a
 	>
 </li>
 
