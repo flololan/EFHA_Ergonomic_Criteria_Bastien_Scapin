@@ -1,6 +1,7 @@
 {
   "title": "Ergonomic criteria",
-  "icon_alt": "Guide to make your site ergonomic | {website} (back to home page)",
+  "site_title": "Guide to make your site ergonomic | {website}",
+  "back_to_home": "Back to home page",
   "criteria": "Criteria",
   "contact": "Contact",
   "goto_main_content": "Go to main content"

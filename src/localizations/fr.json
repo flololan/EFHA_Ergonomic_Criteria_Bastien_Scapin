@@ -1,6 +1,7 @@
 {
   "title": "Critères ergonomique",
-  "icon_alt": "Guide pour rendre votre site ergonomique | {website} (retour à l'accueil)",
+  "site_title": "Guide pour rendre votre site ergonomique | {website}",
+  "back_to_home": "Retour à l'accueil",
   "criteria": "Critères",
   "contact": "Contact",
   "goto_main_content": "Aller au contenu principal"

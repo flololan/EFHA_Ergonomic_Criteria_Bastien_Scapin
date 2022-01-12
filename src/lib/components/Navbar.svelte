@@ -7,7 +7,7 @@
 
   export let segment
 
-  $: logoAlt = $_('icon_alt', { values: { website: window.location.hostname }})
+  $: goToHomeLabel = `${$_('site_title', { values: { website: window.location.hostname }})} (${$_('back_to_home')}))`
 </script>
 
 <style lang="scss">
@@ -46,7 +46,7 @@
 
 <nav class="navbar navbar-expand-lg px-md-4 pt-0 pb-0 navbar-light bg-light shadow">
   <div class="container-fluid">
-    <a id="brand" rel="prefetch" class="p-0 d-flex align-contents-center link-dark" aria-label={logoAlt} href="/">
+    <a id="brand" rel="prefetch" class="p-0 d-flex align-contents-center link-dark" aria-label={goToHomeLabel} href="/">
 			<img src="/assets/icon.svg" class="p-2" alt={`${window.location.hostname} page logo`}>
 			<h1 class="d-none d-md-block ms-1 mb-0 fs-4">{TITLE}</h1>
     </a>
