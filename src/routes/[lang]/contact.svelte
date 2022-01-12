@@ -2,6 +2,7 @@
   import { _ } from 'svelte-i18n'
 
   import { isEmailValid } from '$lib/utils';
+  import MessageSentSuccess from '$lib/components/MessageSentSuccess.svelte';
 
   const MIN_NAME_LENGTH = 2
   const MIN_MESSAGE_LENGTH = 50
@@ -20,6 +21,8 @@
     message: false
   }
 
+  let showSuccess = true
+
   $: errors = {
     email: !isEmailValid(values.email),
     firstName: values.firstName.length < MIN_NAME_LENGTH,
@@ -33,7 +36,14 @@
     let isFormValid = Object.keys(errors).every(error => !errors[error])
 
     if (isFormValid) {
-      alert('youyou')
+      isSubmitted = false
+
+      Object.keys(values).forEach(value => {
+        values[value] = ""
+      });
+
+      values = values
+      showSuccess = true
     }
   }
 </script>
@@ -140,3 +150,5 @@
     <button class="btn btn-success" type="submit">{$_('contact_page.submit')}</button>
   </div>
 </form>
+
+<MessageSentSuccess bind:show={showSuccess}/>
