@@ -21,7 +21,7 @@
     message: false
   }
 
-  let showSuccess = true
+  let showSuccess = false
 
   $: errors = {
     email: !isEmailValid(values.email),

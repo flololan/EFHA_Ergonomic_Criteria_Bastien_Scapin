@@ -1,5 +1,9 @@
 <script lang="ts">
+  import { focusTrap } from 'svelte-focus-trap'
+
   export let show: boolean
+
+  const MODAL_ID = "messageSentSucces"
 </script>
 
 <style>
@@ -8,19 +12,27 @@
   }
 </style>
 
-<div class="modal fade" class:show={show} class:d-block={show} data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" on:click={() => show = false}>Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+{#if show}
+  <div 
+    id={MODAL_ID} 
+    class="modal fade show d-block" 
+    tabindex="-1" 
+    aria-labelledby="modalTitle"
+    use:focusTrap     
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Modal title</h5>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" on:click={() => show = false}>Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+{/if}
