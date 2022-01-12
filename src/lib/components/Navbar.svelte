@@ -46,15 +46,13 @@
 
 <nav class="navbar navbar-expand-lg px-md-4 pt-0 pb-0 navbar-light bg-light shadow">
   <div class="container-fluid">
-    <a id="brand" rel="prefetch" class="p-0 d-flex align-contents-center link-dark" href="/">
-			<img src="/assets/icon.svg" class="p-2" alt={logoAlt}>
+    <a id="brand" rel="prefetch" class="p-0 d-flex align-contents-center link-dark" aria-label={logoAlt} href="/">
+			<img src="/assets/icon.svg" class="p-2" alt={`${window.location.hostname} page logo`}>
 			<h1 class="d-none d-md-block ms-1 mb-0 fs-4">{TITLE}</h1>
     </a>
     <ul class="d-flex ms-auto mb-0">
       <Links {segment} />
-			<li class="nav-item d-none d-md-flex align-items-center">
-				<LocalisationSelect />
-      </li>
     </ul>
+    <LocalisationSelect />
   </div>
 </nav>
