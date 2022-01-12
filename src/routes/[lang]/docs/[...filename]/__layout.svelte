@@ -30,6 +30,12 @@
     $: html = getMdAsHtml(md, { pageSlug: location.pathname });
 </script>
 
-<article class="px-5 pt-3">
+<article class="criteria px-5 pt-3">
     {@html html}
 </article>
+
+<style>
+    .criteria {
+        width: 80ch; /* 80 characters wide */
+    }
+</style>
