@@ -8,11 +8,16 @@ import path from 'path'
 const SRC_DIR = 'static/contents'
 const DST_FILE = 'static/content-index.json'
 
+const LANGS = ['fr', 'en'] as const
+type Langs = typeof LANGS[number]
+
 type EntrySlug = string;
+type Titles = Record<Langs, string>
 export type IndexEntry = {
     slug: EntrySlug
+    title: Titles
     resource: string
-    children?: IndexEntry[]
+    children?: Omit<IndexEntry, 'children'>[]
     next?: EntrySlug
     previous?: EntrySlug
 }
@@ -31,9 +36,27 @@ const getAllDirectories = function(dirPath: string, arrayOfDirectories: string[]
     return arrayOfDirectories
 }
 
-const getContentFromPath = (acc: IndexEntry[], pathToFile: string): IndexEntry[] => {
+const getTitles = (dir: string, slug: string) => {
+    const readTitleInFile = (file) => {
+        const content = fs.readFileSync(file)
+        return content.slice(2, content.indexOf('\n')).toString()
+    }
+    
+    const getTitleNumeration = (slug: string) => {
+        return slug.split('/').reduce((acc, item) => `${acc}${item.match(/^(\d+)/)[1]}.`, '')
+    }
+    
+    return LANGS.reduce((acc, lang) => {
+        acc[lang] = `${getTitleNumeration(slug)} ${readTitleInFile(path.join(dir, `${lang}.md`))}`
+        return acc
+    }, {} as Titles) 
+}
+
+const getEntryFromPath = (acc: IndexEntry[], pathToFile: string): IndexEntry[] => {
+    const slug = pathToFile.split(path.sep).slice(2).join(path.sep)
     const indexEntry = {
-        slug: pathToFile.split(path.sep).slice(2).join(path.sep), 
+        slug,
+        title: getTitles(pathToFile, slug),
         resource: pathToFile,
     }
 
@@ -94,7 +117,7 @@ const addLinks = (content: IndexEntry[]) => {
 const main = () => {
     const paths = getAllDirectories(SRC_DIR);
 
-    const content = paths.reduce(getContentFromPath, [] as IndexEntry[])
+    const content = paths.reduce(getEntryFromPath, [] as IndexEntry[])
     addLinks(content) // in-place operation
 
     fs.writeFileSync(DST_FILE, JSON.stringify(content, undefined, 2))    
