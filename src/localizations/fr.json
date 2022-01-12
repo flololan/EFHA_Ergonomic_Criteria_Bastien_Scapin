@@ -3,5 +3,12 @@
   "icon_alt": "Guide pour rendre votre site ergonomique | {website} (retour à l'accueil)",
   "criteria": "Critères",
   "contact": "Contact",
-  "goto_main_content": "Aller au contenu principal"
+  "goto_main_content": "Aller au contenu principal",
+  "email_addresse": "Adresse e-mail",
+  "firstname": "Prénom",
+  "lastname": "Nom",
+  "contact_page": {
+    "required_field": "Les champs avec le symbol (*) sont requis!",
+    "submit": "Envoyer le message"
+  }
 }
