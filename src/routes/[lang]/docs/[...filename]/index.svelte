@@ -26,4 +26,6 @@
   let html = getMdAsHtml(md, { pageSlug: location.pathname });
 </script>
 
-{@html html}
+<article id="mainContent">
+  {@html html}
+</article>
