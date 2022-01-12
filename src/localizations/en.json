@@ -9,6 +9,12 @@
   "lastname": "Last name",
   "contact_page": {
     "required_field": "Fields with the symbol (*) are required!",
-    "submit": "Send the message"
+    "submit": "Send the message",
+    "invalid_info": {
+      "message_min_length": "Minimum {length} expected characters",
+      "firstname": "Please enter a first name longer than {length} characters",
+      "lastname": "Please enter a last name longer than {length} characters",
+      "email": "Please fill in a valid email like username@email.com"
+    }
   }
 }

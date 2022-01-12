@@ -1,14 +1,21 @@
-import * as fs from 'fs'
-import * as path from 'path'
+export const boostrapValidateForm = (): void => {
+  (function () {
+    'use strict'
 
-export const getDirs = (p: string): string[] => {
-  return fs.readdirSync(p).filter(f => fs.statSync(path.join(p, f)).isDirectory())
-}
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
 
-export const getFiles = (p: string): string[] => {
-  return fs.readdirSync(p).filter(f => fs.statSync(path.join(p, f)).isFile())
-}
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
 
-export const getDocsHierarchy = () => {
-  return getDirs(path.resolve('docs'))
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
 }
