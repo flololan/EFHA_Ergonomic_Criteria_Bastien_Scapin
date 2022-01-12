@@ -59,7 +59,7 @@ const addLinks = (content: IndexEntry[]) => {
             const children = entries[index].children
             const childIndex = children.findIndex((e) => e.slug === entry.slug)
             const currentEntry = children[childIndex]
-            currentEntry.next = (childIndex + 1 < children.length) ? children[childIndex + 1].slug : entries[index + 1].slug
+            currentEntry.next = (childIndex + 1 < children.length) ? children[childIndex + 1].slug : (index + 1 < entries.length) ? entries[index + 1].slug: undefined
         } else if (index + 1 < entries.length) {
             entry.next = entries[index+1].slug
         }
@@ -72,7 +72,8 @@ const addLinks = (content: IndexEntry[]) => {
             const currentEntry = children[childIndex]
             currentEntry.previous = (childIndex - 1 >= 0) ? children[childIndex - 1].slug : entries[index].slug
         } else if (index > 0) {
-            entry.previous = entries[index - 1].slug
+            const previousEntry = entries[index - 1]
+            entry.previous = previousEntry.children ? previousEntry.children.slice(-1)[0].slug : previousEntry.slug
         }
     }
 
