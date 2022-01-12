@@ -15,7 +15,7 @@
 </script>
 
 <nav class="doc-nav px-3 pt-4 border-end">
-    <h2 class="pb-2">{$_("criteria")}</h2>
+    <h2 class="pb-3">{$_("criteria")}</h2>
     <ol class="list-unstyled text-nowrap ps-1 fs-5">
         {#each navStructure as naviItem}
             <li>
