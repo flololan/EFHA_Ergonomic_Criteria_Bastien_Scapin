@@ -12,4 +12,7 @@
 </script>
 
 <Navbar />
-<slot />
+
+<main id="mainContent">
+  <slot />
+</main>

@@ -9,7 +9,11 @@
 </script>
 
 <script>
+  import GoToMainContent from '$lib/components/GoToMainContent.svelte';
+
   import "../styles/global.scss";
 </script>
 
+
+<GoToMainContent />
 <slot />
