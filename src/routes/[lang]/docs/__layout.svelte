@@ -2,7 +2,6 @@
     const NAVIGATION_STRUCTURE = "/content-index.json";
 
     export async function load({ params, fetch }) {
-        console.log("HELLO");
         const res = await fetch(NAVIGATION_STRUCTURE);
         if (res.ok) {
             return {
