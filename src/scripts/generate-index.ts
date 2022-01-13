@@ -1,3 +1,4 @@
+import type { Lang, NavItem, NavTitles } from '$lib/type'
 import fs from 'fs'
 import path from 'path'
 
@@ -8,119 +9,93 @@ import path from 'path'
 const SRC_DIR = 'static/contents'
 const DST_FILE = 'static/content-index.json'
 
-const LANGS = ['fr', 'en'] as const
-type Langs = typeof LANGS[number]
+const LANGS: Readonly<Lang[]> = ['fr', 'en'] as const
 
-type EntrySlug = string;
-type Titles = Record<Langs, string>
-export type IndexEntry = {
-    slug: EntrySlug
-    title: Titles
-    resource: string
-    children?: Omit<IndexEntry, 'children'>[]
-    next?: EntrySlug
-    previous?: EntrySlug
-}
-
-const getAllDirectories = function(dirPath: string, arrayOfDirectories: string[] = []) {
-    const files = fs.readdirSync(dirPath)
-    
-    files.forEach((file) => {
-        const subpath = path.join(dirPath, "/", file)
-        if (fs.statSync(subpath).isDirectory()) {
-            arrayOfDirectories.push(subpath)
-            getAllDirectories(subpath, arrayOfDirectories)
-        }
-    })
-
-    return arrayOfDirectories
+const getDirs = (p: string): string[] => {
+    return fs.readdirSync(p).filter(f => fs.statSync(path.join(p, f)).isDirectory())
 }
 
 const getTitles = (dir: string, slug: string) => {
     const readTitleInFile = (file) => {
-        const content = fs.readFileSync(file)
-        return content.slice(2, content.indexOf('\n')).toString()
+        try {
+            const content = fs.readFileSync(file)
+            return content.slice(2, content.indexOf('\n')).toString()
+        } catch (e) {
+            console.warn(`WARNING: ${file} is not found. The criteria ${path.dirname(file)} won't be available in the lang ${path.basename(file, 'md')}`)
+            return ''
+        }
     }
     
     const getTitleNumeration = (slug: string) => {
-        return slug.split('/').reduce((acc, item) => `${acc}${item.match(/^(\d+)/)[1]}.`, '')
+        return slug.split(path.sep).map((item) => {
+            const extractedNumeration = item.match(/^(\d+)/)
+            return `${extractedNumeration ? extractedNumeration[1]: ''}`
+        }).join('.') + '.'
     }
     
     return LANGS.reduce((acc, lang) => {
-        acc[lang] = `${getTitleNumeration(slug)} ${readTitleInFile(path.join(dir, `${lang}.md`))}`
+        const file = `${lang}.md`
+        const title = readTitleInFile(path.join(dir, file))
+        if (title) {
+            acc[lang] = `${getTitleNumeration(slug)} ${title}`
+        }
         return acc
-    }, {} as Titles) 
+    }, {} as NavTitles) 
 }
 
-const getEntryFromPath = (acc: IndexEntry[], pathToFile: string): IndexEntry[] => {
-    const slug = pathToFile.split(path.sep).slice(2).join(path.sep)
-    const indexEntry = {
-        slug,
-        title: getTitles(pathToFile, slug),
-        resource: pathToFile,
+const bindPreviousNextItems = (hierarchy = {} as NavItem) => {
+    if(!hierarchy.slug && hierarchy.children) {
+        hierarchy.next = hierarchy.children[0].slug
     }
 
-    const parentKey = indexEntry.slug.split(path.sep)[0]
-    const isChildOfAtIndex = (parentKey) ? acc.findIndex((entry) => entry.slug === parentKey): undefined
-
-    if (isChildOfAtIndex === -1) {
-        acc.push(indexEntry)
-    } else if (acc[isChildOfAtIndex].children) {
-        acc[isChildOfAtIndex].children.push(indexEntry)
-    } else {
-        acc[isChildOfAtIndex].children = [indexEntry]
+    if(!hierarchy.children) {
+        return
     }
 
-    return acc
-}
-
-const addLinks = (content: IndexEntry[]) => {
-    const addNextLink = (entry: IndexEntry, index: number, isChild = false, entries=content) => {
+    hierarchy.children.forEach((entry, i, entries)  => {
         if (entry.children) {
             entry.next = entry.children[0].slug
-        } else if (isChild) {
-            const children = entries[index].children
-            const childIndex = children.findIndex((e) => e.slug === entry.slug)
-            const currentEntry = children[childIndex]
-            currentEntry.next = (childIndex + 1 < children.length) ? children[childIndex + 1].slug : (index + 1 < entries.length) ? entries[index + 1].slug: undefined
-        } else if (index + 1 < entries.length) {
-            entry.next = entries[index+1].slug
+            entry.children[0].previous = entry.slug
+            if (i + 1 < entries.length) {
+                entry.children[entry.children.length - 1].next = entries[i + 1].slug
+            }
+        } else if (i < entries.length - 1) {
+            entry.next = entries[i + 1].slug 
         }
+
+        if (i === 0) {
+            entry.previous = hierarchy.slug
+        } else if (entries[i - 1].children) {
+            entry.previous = entries[i - 1].children?.slice(-1)[0].slug
+        } else {
+            entry.previous = entries[i - 1].slug
+        }
+
+        bindPreviousNextItems(entry)
+    });
+}
+
+const getHierarchy = (rootPath = SRC_DIR, hierarchy = {} as NavItem): NavItem => {
+    if(rootPath !== SRC_DIR) {
+        hierarchy.slug = rootPath.split(path.sep).slice(2).join(path.sep) ?? '/'
+        hierarchy.title = getTitles(rootPath, hierarchy.slug)
     }
 
-    const addPreviousLink = (entry: IndexEntry, index: number, isChild = false, entries=content) => {
-        if (isChild) {
-            const children = entries[index].children
-            const childIndex = children.findIndex((e) => e.slug === entry.slug)
-            const currentEntry = children[childIndex]
-            currentEntry.previous = (childIndex - 1 >= 0) ? children[childIndex - 1].slug : entries[index].slug
-        } else if (index > 0) {
-            const previousEntry = entries[index - 1]
-            entry.previous = previousEntry.children ? previousEntry.children.slice(-1)[0].slug : previousEntry.slug
-        }
+    const dirs = getDirs(rootPath)
+
+    if (dirs.length > 0) {
+        hierarchy.children = dirs.map(dirPath => {
+            return getHierarchy(path.join(rootPath, dirPath))
+        })
     }
 
-    content.forEach((entry, i) => {
-        addPreviousLink(entry, i)
-        addNextLink(entry, i)
-
-        // Second level
-        if (entry.children) {
-            entry.children.forEach((entry) => {
-                addPreviousLink(entry, i, true)
-                addNextLink(entry, i, true)
-            })
-        }
-    })
+    return hierarchy
 }
 
 const main = () => {
-    const paths = getAllDirectories(SRC_DIR);
-
-    const content = paths.reduce(getEntryFromPath, [] as IndexEntry[])
-    addLinks(content) // in-place operation
-
-    fs.writeFileSync(DST_FILE, JSON.stringify(content, undefined, 2))    
+    const hierarchy = getHierarchy()
+    bindPreviousNextItems(hierarchy)
+    fs.writeFileSync(DST_FILE, JSON.stringify(hierarchy, undefined, 2))
 }
 
 main()
