@@ -1,4 +1,4 @@
-# Minimal actions#
+# Minimal actions
 
 ## Definition
 
