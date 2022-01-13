@@ -40,10 +40,10 @@ Resumé et autre?
 ## Page avec form
 
 Contact?
-- [ ] Prénom + Nom / Pseudo
-- [ ] Email
+- [X] Prénom + Nom / Pseudo
+- [X] Email
 - [ ] Telephone
-- [ ] Message
+- [X] Message
 
 ## À améliorer
 
