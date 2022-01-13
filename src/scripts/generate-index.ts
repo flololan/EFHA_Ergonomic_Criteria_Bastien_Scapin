@@ -14,15 +14,15 @@ type Langs = typeof LANGS[number]
 type EntrySlug = string;
 type Titles = Record<Langs, string>
 
-export type Navigation = {
-    children?: IndexEntry[]
+export type NavStructure = {
+    children?: NavItem[]
     next: EntrySlug
 }
-type IndexEntry = {
+type NavItem = {
     slug: EntrySlug
     title: Titles
     resource: string
-    children?: IndexEntry[]
+    children?: NavItem[]
     next?: EntrySlug
     previous?: EntrySlug
 }
@@ -37,7 +37,7 @@ const getTitles = (dir: string, slug: string) => {
             const content = fs.readFileSync(file)
             return content.slice(2, content.indexOf('\n')).toString()
         } catch (e) {
-            // console.warn(`WARNING: ${file} is expected but not found`)
+            console.warn(`WARNING: ${file} is not found. The criteria ${path.dirname(file)} won't be available in the lang ${path.basename(file, 'md')}`)
             return ''
         }
     }
@@ -59,7 +59,7 @@ const getTitles = (dir: string, slug: string) => {
     }, {} as Titles) 
 }
 
-const bindPreviousNextItems = (hierarchy = {} as IndexEntry) => {
+const bindPreviousNextItems = (hierarchy = {} as NavItem) => {
     if(!hierarchy.slug && hierarchy.children) {
         hierarchy.next = hierarchy.children[0].slug
     }
@@ -91,7 +91,7 @@ const bindPreviousNextItems = (hierarchy = {} as IndexEntry) => {
     });
 }
 
-const getHierarchy = (rootPath = SRC_DIR, hierarchy = {} as IndexEntry): IndexEntry => {
+const getHierarchy = (rootPath = SRC_DIR, hierarchy = {} as NavItem): NavItem => {
     if(rootPath !== SRC_DIR) {
         hierarchy.slug = rootPath.split(path.sep).slice(2).join(path.sep) ?? '/'
         hierarchy.title = getTitles(rootPath, hierarchy.slug)
