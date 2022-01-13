@@ -29,9 +29,9 @@ Resumé et autre?
 - [ ] Lien vers la Roadmap
 
 ## Page avec méthodes/contenu
-- [ ] readme pour chaque methode --> Site static
+- [x] fichier markdown pour chaque methode --> Site static
   - [x] fr
-  - [ ] en
+  - [x] en
 - [ ] Boutons de navigation (got to next method, go to previous method)
 - [x] Barre latérale de navigation structurée en liste et sous-liste
 - [ ] Bouton editer --> go to the README on GitHub (Optional)
@@ -48,4 +48,10 @@ Contact?
 ## À améliorer
 
 ### Technique
-- structure recursive de la DocNav (navigation des critères)
+- [ ] structure recursive de la DocNav (navigation des critères)
+- [ ] ajouter des liens entre les critères dans les descriptions
+
+### Contenu
+- [ ] Ajouter les commentaires entre les critères
+  - [ ] en francais
+  - [ ] en anglais

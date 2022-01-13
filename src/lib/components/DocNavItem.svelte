@@ -13,7 +13,6 @@
     const buildUrl = (naviItem: NavItem) => {
         return `${base_url}/${naviItem.slug}`;
     };
-    console.log(nav);
 </script>
 
 <ol class="list-unstyled text-nowrap ps-3 fs-5">
