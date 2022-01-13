@@ -4,13 +4,16 @@
   "criteria": "Critères",
   "contact": "Contact",
   "goto_main_content": "Aller au contenu principal",
+  "goto_home_page": "Aller à la page principale",
   "email_addresse": "Adresse e-mail",
   "firstname": "Prénom",
   "lastname": "Nom",
   "contact_page": {
+    "success_message": "Votre message a été envoyé avec succès!",
     "required_field": "Les champs avec le symbol (*) sont requis!",
     "submit": "Envoyer le message",
     "currently": "Actuellement",
+    "back_to_contact": "Retour au formulaire de contact",
     "invalid_info": {
       "message_min_length": "Minimum {length} charactères attendus",
       "firstname": "Veuillez saisir un prénom d'une longueur supérieure à {length} charactères",

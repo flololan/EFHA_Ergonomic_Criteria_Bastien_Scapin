@@ -7,6 +7,7 @@
   const MIN_NAME_LENGTH = 2
   const MIN_MESSAGE_LENGTH = 50
 
+  let showSuccess = false
   let isSubmitted = false
   let values = {
     email: "",
@@ -20,8 +21,6 @@
     lastName: false,
     message: false
   }
-
-  let showSuccess = false
 
   $: errors = {
     email: !isEmailValid(values.email),
@@ -150,5 +149,4 @@
     <button class="btn btn-success" type="submit">{$_('contact_page.submit')}</button>
   </div>
 </form>
-
 <MessageSentSuccess bind:show={showSuccess}/>
