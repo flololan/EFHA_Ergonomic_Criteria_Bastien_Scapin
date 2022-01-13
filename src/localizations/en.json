@@ -3,5 +3,22 @@
   "icon_alt": "Guide to make your site ergonomic | {website} (back to home page)",
   "criteria": "Criteria",
   "contact": "Contact",
-  "goto_main_content": "Go to main content"
+  "goto_main_content": "Go to main content",
+  "goto_home_page": "Go to the home page",
+  "email_addresse": "Email address",
+  "firstname": "First name",
+  "lastname": "Last name",
+  "contact_page": {
+    "success_message": "Your message has been sent successfully!",
+    "required_field": "Fields with the symbol (*) are required!",
+    "submit": "Send the message",
+    "currently": "Currently",
+    "back_to_contact": "Back to the contact form",
+    "invalid_info": {
+      "message_min_length": "Minimum {length} expected characters",
+      "firstname": "Please enter a first name longer than {length} characters",
+      "lastname": "Please enter a last name longer than {length} characters",
+      "email": "Please fill in a valid email like username@email.com"
+    }
+  }
 }

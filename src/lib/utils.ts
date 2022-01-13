@@ -1,14 +1,5 @@
-import * as fs from 'fs'
-import * as path from 'path'
+import { EMAIL_REGEX } from "./const"
 
-export const getDirs = (p: string): string[] => {
-  return fs.readdirSync(p).filter(f => fs.statSync(path.join(p, f)).isDirectory())
-}
-
-export const getFiles = (p: string): string[] => {
-  return fs.readdirSync(p).filter(f => fs.statSync(path.join(p, f)).isFile())
-}
-
-export const getDocsHierarchy = () => {
-  return getDirs(path.resolve('docs'))
+export const isEmailValid = (email: string): boolean => {
+  return EMAIL_REGEX.test(String(email).toLowerCase());
 }

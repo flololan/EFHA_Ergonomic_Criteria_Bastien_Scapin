@@ -1,12 +1,12 @@
 <script lang="ts">
+  import { page } from '$app/stores'
   import { _ } from 'svelte-i18n'
   import { TITLE } from '$lib/const'
 
   import LocalisationSelect from "./LocalisationSelect.svelte";
   import Links from "./Links.svelte";
 
-  export let segment
-
+  $: path = $page.url.pathname
   $: logoAlt = $_('icon_alt', { values: { website: window.location.hostname }})
 </script>
 
@@ -51,7 +51,7 @@
 			<h1 class="d-none d-md-block ms-1 mb-0 fs-4">{TITLE}</h1>
     </a>
     <ul class="d-flex ms-auto mb-0">
-      <Links {segment} />
+      <Links {path} />
     </ul>
     <LocalisationSelect />
   </div>

@@ -2,13 +2,13 @@
 	import { _ } from "svelte-i18n";
 	import { locale } from "svelte-i18n";
 
-	export let segment;
+	export let path: string
 </script>
 
 <li class="nav-item">
 	<a
 		class="nav-link"
-		class:active={segment === "docs"}
+		class:active={path.includes('/docs')}
 		rel="prefetch"
 		href={`/${$locale}/docs`}>{$_("criteria")}</a
 	>
@@ -16,9 +16,9 @@
 <li class="nav-item">
 	<a
 		class="nav-link"
-		class:active={segment === "deployment"}
+		class:active={path.endsWith('contact')}
 		rel="prefetch"
-		href={`/${$locale}/contacts`}>{$_("contact")}</a
+		href={`/${$locale}/contact`}>{$_("contact")}</a
 	>
 </li>
 
@@ -40,3 +40,4 @@
 		color: black;
 	}
 </style>
+
