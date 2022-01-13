@@ -1,3 +1,4 @@
+import type { Lang, NavItem, NavTitles } from '$lib/type'
 import fs from 'fs'
 import path from 'path'
 
@@ -8,24 +9,7 @@ import path from 'path'
 const SRC_DIR = 'static/contents'
 const DST_FILE = 'static/content-index.json'
 
-const LANGS = ['fr', 'en'] as const
-type Langs = typeof LANGS[number]
-
-type EntrySlug = string;
-type Titles = Record<Langs, string>
-
-export type NavStructure = {
-    children?: NavItem[]
-    next: EntrySlug
-}
-type NavItem = {
-    slug: EntrySlug
-    title: Titles
-    resource: string
-    children?: NavItem[]
-    next?: EntrySlug
-    previous?: EntrySlug
-}
+const LANGS: Readonly<Lang[]> = ['fr', 'en'] as const
 
 const getDirs = (p: string): string[] => {
     return fs.readdirSync(p).filter(f => fs.statSync(path.join(p, f)).isDirectory())
@@ -56,7 +40,7 @@ const getTitles = (dir: string, slug: string) => {
             acc[lang] = `${getTitleNumeration(slug)} ${title}`
         }
         return acc
-    }, {} as Titles) 
+    }, {} as NavTitles) 
 }
 
 const bindPreviousNextItems = (hierarchy = {} as NavItem) => {

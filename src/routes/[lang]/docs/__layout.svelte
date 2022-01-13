@@ -2,17 +2,17 @@
     const NAVI_HIERARCHY_RESOURCE = "/content-index.json";
 
     export async function load({ fetch }) {
-        const navStructureRes = await fetch(NAVI_HIERARCHY_RESOURCE);
-        if (navStructureRes.ok) {
+        const navRes = await fetch(NAVI_HIERARCHY_RESOURCE);
+        if (navRes.ok) {
             return {
                 props: {
-                    navStructure: await navStructureRes.json(),
+                    nav: await navRes.json(),
                 },
             };
         }
 
         return {
-            status: navStructureRes.status,
+            status: navRes.status,
             error: new Error(
                 `The documentation for ${NAVI_HIERARCHY_RESOURCE} doesn't exist!`
             ),
@@ -22,11 +22,12 @@
 
 <script lang="ts">
     import DocNav from "$lib/components/DocNav.svelte";
+    import type { NavStructure } from "$lib/type";
 
-    export let navStructure;
+    export let nav: NavStructure;
 </script>
 
 <div class="d-flex">
-    <DocNav {navStructure} />
+    <DocNav {nav} />
     <slot />
 </div>
