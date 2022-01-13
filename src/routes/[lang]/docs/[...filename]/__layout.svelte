@@ -1,6 +1,5 @@
 <script context="module" lang="ts">
     export async function load({ params, fetch, session }) {
-        console.log(params);
         const res = await fetch(
             `/contents/${params.filename}/${params.lang}.md`
         );
