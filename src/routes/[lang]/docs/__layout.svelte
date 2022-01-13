@@ -27,7 +27,7 @@
     export let nav: NavStructure;
 </script>
 
-<div class="d-flex">
+<div class="d-flex position-relative">
     <DocNav {nav} />
     <slot />
 </div>
