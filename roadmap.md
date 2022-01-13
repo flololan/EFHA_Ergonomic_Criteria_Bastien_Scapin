@@ -1,46 +1,51 @@
-### Todo 
-- ✅ URGENT: Demander la permission à Bastien
-- envoyer mail au enseignant regardant les skip-link cf: https://restapify.vercel.app/docs
+# Todo 
 
-# Global features
-- Multilangual (option) --> Language selector in NAV
-- Searchbar in NAV
-- "Go to content"-Button / Skip-Link
-- Theme light, Theme High contrast
-- No/little animation-mode
-- Cookie-Pop-Up needs to be accessible (Si on utilise pas de cookies juste du text expliquant bla bla, SHOW YOUR MUSCLES)
+## Fonctionnalitées générales
+- [x] Multilangual (option) --> Language selector in NAV
+- [ ] Barre de recherche dans la navigation principale
+- [ ] "Go to content"-Button / Skip-Link
+- [ ] Theme light, Theme High contrast
+- [ ] No/little animation-mode
+- [ ] Cookie-Pop-Up needs to be accessible (Si on utilise pas de cookies juste du text expliquant bla bla, SHOW YOUR MUSCLES)
 
+## Fonctionnalité spécifique à certaines pages
 ## Footer
-- Impressum/Mention legales/Cookies
-- Niveau d'accebilité
-- Sitemap --> XML
-- Menu
+- [ ] Impressum/Mention legales/Cookies
+- [ ] Niveau d'accebilité
+- [ ] Sitemap --> XML
+- [ ] Menu
 
-# Contenu Homepage
+## Contenu Homepage
 
 Fancy welcome page with call to action (go to "About" and go to "Methods")
 
 
-# About
+## About
 
 Resumé et autre?
-@lyokolux
-- Importance de l'accesibilité
-- Regle dans les pays
-- comparaison critère bastien scapin et accessibilité
+- [ ] Importance de l'accesibilité
+- [ ] Regle dans les pays
+- [ ] comparaison critère bastien scapin et accessibilité
+- [ ] Lien vers la Roadmap
 
-# Page avec méthodes/contenu
-- readme pour chaque methode --> Site static
-- Boutons de navigation (got to next method, go to previous method)
-- Side-bar (Avec categories ou alternative: Tree-menu)
-- Bouton editer --> Goes To Readmes on GitHub (Optional)
+## Page avec méthodes/contenu
+- [ ] readme pour chaque methode --> Site static
+  - [x] fr
+  - [ ] en
+- [ ] Boutons de navigation (got to next method, go to previous method)
+- [x] Barre latérale de navigation structurée en liste et sous-liste
+- [ ] Bouton editer --> Goes To Readmes on GitHub (Optional)
+- [ ] Copier Coller rapide
 
-Copier Coller
-
-# Page avec form
+## Page avec form
 
 Contact?
-- Prénom + Nom / Pseudo
-- Email
-- Telephone
-- Message
+- [ ] Prénom + Nom / Pseudo
+- [ ] Email
+- [ ] Telephone
+- [ ] Message
+
+## À améliorer
+
+### Technique
+- structure recursive de la DocNav (navigation des critères)
