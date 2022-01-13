@@ -48,4 +48,10 @@ Contact?
 ## À améliorer
 
 ### Technique
-- structure recursive de la DocNav (navigation des critères)
+- [ ] structure recursive de la DocNav (navigation des critères)
+- [ ] ajouter des liens entre les critères dans les descriptions
+
+### Contenu
+- [ ] Ajouter les commentaires entre les critères
+  - [ ] en francais
+  - [ ] en anglais
