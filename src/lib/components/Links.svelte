@@ -8,7 +8,7 @@
 <li class="nav-item">
 	<a
 		class="nav-link"
-		class:active={path.endsWith('docs'}
+		class:active={path.endsWith('docs')}
 		rel="prefetch"
 		href={`/${$locale}/docs`}>{$_("criteria")}</a
 	>
