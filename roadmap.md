@@ -34,7 +34,7 @@ Resumé et autre?
   - [x] en
 - [ ] Boutons de navigation (got to next method, go to previous method)
 - [x] Barre latérale de navigation structurée en liste et sous-liste
-- [ ] Bouton editer --> go to the README on GitHub (Optional)
+- [x] Bouton editer --> go to the README on GitHub (Optional)
 - [ ] Copier Coller rapide
 
 ## Page avec form
