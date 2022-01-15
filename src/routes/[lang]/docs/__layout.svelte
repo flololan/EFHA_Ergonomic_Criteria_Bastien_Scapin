@@ -1,12 +1,16 @@
 <script context="module">
-    const NAVI_HIERARCHY_RESOURCE = "/content-index.json";
+    import { NAVI_HIERARCHY_RESOURCE } from "$lib/const";
 
     export async function load({ fetch }) {
         const navRes = await fetch(NAVI_HIERARCHY_RESOURCE);
         if (navRes.ok) {
+            const nav = await navRes.json();
             return {
                 props: {
-                    nav: await navRes.json(),
+                    nav,
+                },
+                stuff: {
+                    nav,
                 },
             };
         }

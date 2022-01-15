@@ -22,5 +22,7 @@
     }
   },
   "edit_this_criteria": "Edit this criteria",
-  "on_github": "on Github"
+  "on_github": "on Github",
+  "previous_criteria": "Previous criteria",
+  "next_criteria": "Next criteria"
 }
