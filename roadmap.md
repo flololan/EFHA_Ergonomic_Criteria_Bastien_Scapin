@@ -12,7 +12,7 @@
 ## Footer
 - [ ] Impressum/Mention legales/Cookies
 - [ ] Niveau d'accessibilité
-- [ ] Sitemap --> XML
+- [x] Sitemap --> XML
 - [ ] Menu
 
 ## Contenu Homepage
@@ -47,7 +47,7 @@ Resumé et autre?
 ## À améliorer
 
 ### Technique
-- [ ] structure recursive de la DocNav (navigation des critères)
+- [x] structure recursive de la DocNav (navigation des critères)
 - [ ] ajouter des liens entre les critères dans les descriptions
 
 ### Contenu
