@@ -34,11 +34,11 @@
   let showSidebar = true
 </script>
 
-<div class="d-flex position-relative">
+<div class="d-flex position-relative" style="height: 100%; overflow: hidden">
   <DocNav {nav} bind:showSidebar />
-  <main id="mainContent">
-    <slot />
 
+  <main id="mainContent" class="overflow-scroll">
+    <slot />
     <ToggleDocNavBtn bind:showSidebar />
   </main>
 </div>

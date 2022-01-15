@@ -11,7 +11,7 @@
 </script>
 
 <nav
-  class="position-relative doc-nav px-3 pt-4 border-end"
+  class="position-relative doc-nav px-3 pt-4 border-end overflow-scroll"
   class:d-none={!showSidebar}
   aria-live="polite"
 >
