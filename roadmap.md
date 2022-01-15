@@ -3,7 +3,7 @@
 ## Fonctionnalitées générales
 - [x] Multilangual (option) --> Language selector in NAV
 - [ ] Barre de recherche dans la navigation principale
-- [ ] "Go to content"-Button / Skip-Link
+- [x] "Go to content"-Button / Skip-Link
 - [ ] Theme light, Theme High contrast
 - [ ] No/little animation-mode
 - [ ] Cookie-Pop-Up needs to be accessible (Si on utilise pas de cookies juste du text expliquant bla bla, SHOW YOUR MUSCLES)
@@ -11,7 +11,7 @@
 ## Fonctionnalité spécifique à certaines pages
 ## Footer
 - [ ] Impressum/Mention legales/Cookies
-- [ ] Niveau d'accebilité
+- [ ] Niveau d'accessibilité
 - [ ] Sitemap --> XML
 - [ ] Menu
 
@@ -32,18 +32,18 @@ Resumé et autre?
 - [x] fichier markdown pour chaque methode --> Site static
   - [x] fr
   - [x] en
-- [ ] Boutons de navigation (got to next method, go to previous method)
+- [x] Boutons de navigation (got to next method, go to previous method)
 - [x] Barre latérale de navigation structurée en liste et sous-liste
 - [x] Bouton editer --> go to the README on GitHub (Optional)
 - [ ] Copier Coller rapide
 
-## Page avec form
-
-Contact?
-- [X] Prénom + Nom / Pseudo
-- [X] Email
-- [ ] Telephone
-- [X] Message
+## Contact page
+- [x] Fields
+  - [X] Prénom + Nom / Pseudo
+  - [X] Email
+  - [x] Telephone
+  - [X] Message
+- [x] Error checking
 
 ## À améliorer
 
