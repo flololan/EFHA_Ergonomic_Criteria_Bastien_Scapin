@@ -31,8 +31,8 @@
       "email": "Veuillez saisir une adresse email valide comme utilisateur@email.com"
     }
   },
-  "edit_this_criteria": "Éditer ce critère",
+  "edit_this_criterion": "Éditer ce critère",
   "on_github": "sur Github",
-  "next_criteria": "Critère suivant",
-  "previous_criteria": "Critère précédent"
+  "next_criterion": "Critère suivant",
+  "previous_criterion": "Critère précédent"
 }
