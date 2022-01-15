@@ -1,8 +1,8 @@
-import type { LANGUAGES } from "./const";
+import type { LANGS } from "./const";
 
 // Lang code available in the interface
-export type Langs = typeof LANGUAGES
-export type Lang = keyof typeof LANGUAGES
+export type Langs = typeof LANGS
+export type Lang = Langs[number]
 
 /** NAVIGATION (parsing of the criteria) **/
 export type EntrySlug = string;

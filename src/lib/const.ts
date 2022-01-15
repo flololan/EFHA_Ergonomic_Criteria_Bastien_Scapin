@@ -1,11 +1,7 @@
-export const LANGUAGES = {
-  en: "English",
-  fr: "Français"
-} as const
+export const LANGS = [ 'en', 'fr'] as const
+export const DEFAULT_LANG = 'en'
 
 export const TITLE = 'is-ergonomic'
-
-export const DEFAULT_LANG = 'en'
 
 export const NAVI_HIERARCHY_RESOURCE = "/content-index.json";
 
