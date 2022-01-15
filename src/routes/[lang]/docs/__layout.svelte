@@ -33,5 +33,7 @@
 
 <div class="d-flex position-relative">
     <DocNav {nav} />
-    <slot />
+    <main id="mainContent">
+        <slot />
+    </main>
 </div>

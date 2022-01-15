@@ -64,7 +64,7 @@
     $: next = currentNavItem?.next;
 </script>
 
-<article id="mainContent" class="criteria px-5 pt-4">
+<article class="criteria px-5 pt-4">
     {@html html}
     <div class="row d-flex justify-content-between my-5">
         {#if prev}
