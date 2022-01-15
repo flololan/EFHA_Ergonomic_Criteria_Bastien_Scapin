@@ -22,8 +22,8 @@
 </script>
 
 <script lang="ts">
-    import EditOnGithub from "$lib/components/EditOnGithub.svelte";
-    import { getMdAsHtml } from "$lib/mdToHtmlParser";
+    import EditOnGithub from '$lib/components/EditOnGithub.svelte';
+    import { getMdAsHtml } from '$lib/mdToHtmlParser';
 
     export let md: string;
     export let slug: string;
@@ -32,13 +32,17 @@
     $: html = getMdAsHtml(md, { pageSlug: location.pathname });
 </script>
 
-<article id="mainContent" class="criteria px-5 pt-4">
+<article id="mainContent" class="criteria position-relative px-5 pt-4">
     {@html html}
     <EditOnGithub {slug} />
 </article>
 
-<style>
+<style lang="scss">
     .criteria {
         width: 80ch; /* 80 characters wide */
+    }
+
+    :global(.criteria h1) {
+        max-width: calc(80vw - 6rem - 1rem);
     }
 </style>
