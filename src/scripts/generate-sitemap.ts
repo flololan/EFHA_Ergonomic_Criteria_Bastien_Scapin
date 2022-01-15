@@ -50,8 +50,7 @@ const render = () => {
       .join('\n')
     }
   `).join('\n')}
-  </urlset>
-</xml>`
+  </urlset>`
 }
 
 fs.writeFileSync(OUTPUT_FILE, render())
