@@ -41,8 +41,4 @@
     .criteria {
         width: 80ch; /* 80 characters wide */
     }
-
-    :global(.criteria h1) {
-        max-width: calc(80vw - 6rem - 1rem);
-    }
 </style>

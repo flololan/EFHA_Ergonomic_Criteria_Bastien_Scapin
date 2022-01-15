@@ -11,22 +11,20 @@
 </script>
 
 <a
-    class="edit-link d-flex align-items-center position-absolute top-0 mt-4 me-3 btn btn-outline-dark"
+    class="edit-link d-flex align-items-center top-0 end-0 mt-4 me-3 btn btn-outline-dark"
     {href}
     target="_blank"
 >
     <span>{$_('edit_this_criteria')}</span>
-    <span class="github-logo ms-1"><GithubLogo alt={$_('on_github')} /></span>
+    <span class="github-logo ms-1 fs-6" aria-label={$_('on_github')}
+        ><GithubLogo /></span
+    >
 </a>
 
-<style>
+<style lang="scss">
     .edit-link {
-        left: min(80vw, calc(80ch + 3rem));
-        transform: translateX(-50%);
-    }
-
-    .github-logo {
-        width: 1.8rem;
+        width: max-content;
+        transform: translateX(100%);
     }
 
     a:hover .github-logo {
