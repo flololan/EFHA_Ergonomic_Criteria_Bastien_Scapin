@@ -37,7 +37,7 @@
 <div class="d-flex position-relative" style="height: 100%; overflow: hidden">
   <DocNav {nav} bind:showSidebar />
 
-  <main id="mainContent" class="overflow-scroll">
+  <main id="mainContent" class="w-100 overflow-scroll">
     <slot />
     <ToggleDocNavBtn bind:showSidebar />
   </main>

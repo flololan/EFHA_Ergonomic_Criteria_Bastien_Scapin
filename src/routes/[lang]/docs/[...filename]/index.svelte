@@ -80,5 +80,12 @@
                 >
             </a>
         {/if}
-    </div>
 </article>
+
+<style>
+    article {
+        width: 80ch;
+        max-width: 100%;
+        text-align: justify;
+    }
+</style>
