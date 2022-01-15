@@ -2,7 +2,7 @@
 
 ## Fonctionnalitées générales
 - [x] Multilangual (option) --> Language selector in NAV
-- [ ] Barre de recherche dans la navigation principale
+- [ ] Barre de recherche au niveau des critères
 - [x] "Go to content"-Button / Skip-Link
 - [ ] Theme light, Theme High contrast
 - [ ] No/little animation-mode
@@ -35,13 +35,12 @@ Resumé et autre?
 - [x] Boutons de navigation (got to next method, go to previous method)
 - [x] Barre latérale de navigation structurée en liste et sous-liste
 - [x] Bouton editer --> go to the README on GitHub (Optional)
-- [ ] Copier Coller rapide
 
 ## Contact page
 - [x] Fields
   - [X] Prénom + Nom / Pseudo
   - [X] Email
-  - [x] Telephone
+  - [ ] Telephone
   - [X] Message
 - [x] Error checking
 
