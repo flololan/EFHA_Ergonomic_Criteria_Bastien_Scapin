@@ -1,13 +1,13 @@
 <script lang="ts">
-    import { EDIT_CRITERIA_ROOT_PATH } from '$lib/const';
-    import GithubLogo from '$lib/svg/GithubLogo.svelte';
-    import { locale, _ } from 'svelte-i18n';
+    import { EDIT_CRITERIA_ROOT_PATH } from '$lib/const'
+    import GithubLogo from '$lib/svg/GithubLogo.svelte'
+    import { locale, _ } from 'svelte-i18n'
 
-    export let slug: string;
+    export let slug: string
 
-    let lang;
-    $: lang = $locale;
-    $: href = `${EDIT_CRITERIA_ROOT_PATH}/${slug}/${lang}.md`;
+    let lang
+    $: lang = $locale
+    $: href = `${EDIT_CRITERIA_ROOT_PATH}/${slug}/${lang}.md`
 </script>
 
 <a
