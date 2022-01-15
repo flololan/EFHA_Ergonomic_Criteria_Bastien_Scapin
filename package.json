@@ -1,6 +1,7 @@
 {
   "name": "efha-ergonomic-criteria-bastien-scapin",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "predev": "yarn generate-index",
     "dev": "svelte-kit dev",
