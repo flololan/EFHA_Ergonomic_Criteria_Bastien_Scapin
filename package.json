@@ -12,7 +12,8 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "eslint --ignore-path .gitignore .",
-    "generate-index": "node --loader ts-node/esm src/scripts/generate-index.ts"
+    "generate-index": "node --loader ts-node/esm src/scripts/generate-index.ts",
+    "generate-sitemap": "node --loader ts-node/esm src/scripts/generate-sitemap.ts"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
@@ -25,12 +26,14 @@
     "eslint-plugin-svelte3": "^3.2.1",
     "postcss": "^8.4.5",
     "sass": "^1.47.0",
+    "sitemap-generator": "^8.5.1",
     "svelte": "^3.44.0",
     "svelte-bootstrap-icons": "^1.7.2",
     "svelte-check": "^2.2.6",
     "svelte-focus-trap": "^1.2.0",
     "svelte-i18n": "^3.3.13",
     "svelte-preprocess": "^4.9.4",
+    "svelte-sitemap": "^2.2.0",
     "ts-node": "^10.4.0",
     "tslib": "^2.3.1",
     "typescript": "^4.4.3",
