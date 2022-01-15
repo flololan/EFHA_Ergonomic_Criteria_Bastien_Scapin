@@ -1,13 +1,14 @@
 <script lang="ts">
-    import { _ } from "svelte-i18n";
+  import { _ } from "svelte-i18n";
+  import { focusTrap } from 'svelte-focus-trap'
 
-    import type { NavStructure } from "$lib/type";
+  import type { NavStructure } from "$lib/type";
 
-    import CloseDocNavBtn from "./CloseDocNavBtn.svelte";
-    import DocNavItem from "./DocNavItem.svelte";
+  import CloseDocNavBtn from "./CloseDocNavBtn.svelte";
+  import DocNavItem from "./DocNavItem.svelte";
 
-    export let nav: NavStructure;
-    export let showSidebar = true
+  export let nav: NavStructure;
+  export let showSidebar = true
 </script>
 
 <nav
@@ -16,10 +17,12 @@
   aria-live="polite"
 >
   {#if showSidebar}
-    <CloseDocNavBtn bind:showSidebar class="top-0 end-0" />
-    <h2 class="pb-3">{$_("criteria")}</h2>
-    <div class="h-100 overflow-scroll">
-      <DocNavItem nav={nav.children} />
+    <div use:focusTrap class="h-100">
+      <CloseDocNavBtn bind:showSidebar class="top-0 end-0" />
+      <h2 class="pb-3">{$_("criteria")}</h2>
+      <div class="h-100 overflow-scroll">
+        <DocNavItem nav={nav.children} />
+      </div>
     </div>
   {/if} 
 </nav>
