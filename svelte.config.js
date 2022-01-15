@@ -9,11 +9,12 @@ const config = {
 
 	kit: {
 		adapter: adapterStatic({
-      // default options are shown
-      pages: 'build',
-      assets: 'build',
-      fallback: null
-    }),
+			// default options are shown
+			pages: 'build',
+			assets: 'build',
+			fallback: null
+		}),
+	
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		ssr: false
