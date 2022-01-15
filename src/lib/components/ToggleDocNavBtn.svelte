@@ -9,11 +9,15 @@
     <CloseDocNavBtn bind:showSidebar class="bottom-0 end-0" />
 {:else}
   <button
-    id="closeSidebarBtn"
-    class="d-md-none btn btn-outline-secondary text-dark bg-light position-absolute bottom-0 end-0 m-2" 
+    class="d-md-none btn btn-outline-dark text-dark bg-light position-absolute bottom-0 end-0 m-2" 
     on:click={() => { showSidebar = !showSidebar }}
   >
     <List />
   </button>
 {/if}
-  
+
+<style>
+  :global(button) {
+    z-index: 3;
+  }
+</style>

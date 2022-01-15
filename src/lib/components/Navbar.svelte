@@ -29,7 +29,7 @@
 	}
 
 	nav {
-		z-index: 2;
+		z-index: 4;
 	}
 
 	.navbar-brand img {
