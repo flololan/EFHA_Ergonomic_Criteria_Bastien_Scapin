@@ -11,7 +11,7 @@
 </script>
 
 <a
-    class="edit-link d-flex align-items-center top-0 end-0 mt-4 me-3 btn btn-outline-dark"
+    class="edit-link d-flex align-items-center position-absolute top-0 end-0 mt-4 me-3 btn btn-outline-dark"
     {href}
     target="_blank"
 >
