@@ -66,15 +66,15 @@
 
 <article id="mainContent" class="criteria px-5 pt-4">
     {@html html}
-    <div class="d-flex justify-content-between pt-5">
+    <div class="row d-flex justify-content-between my-5">
         {#if prev}
-            <a class="btn btn-primary me-auto" href={getCriteriaUrl(prev)}>
+            <a class="btn btn-outline-secondary col-9 col-md-5" href={getCriteriaUrl(prev)}>
                 <span class="me-1" aria-hidden="true">←</span>
                 {$_('previous_criteria')}
             </a>
         {/if}
         {#if next}
-            <a class="btn btn-primary ms-auto" href={getCriteriaUrl(next)}>
+            <a class="btn btn-outline-secondary col-9 col-md-5 ms-auto mt-3 mt-md-0" href={getCriteriaUrl(next)}>
                 {$_('next_criteria')}<span class="ms-1" aria-hidden="true">
                     →</span
                 >
