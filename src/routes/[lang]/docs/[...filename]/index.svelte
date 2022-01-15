@@ -39,14 +39,19 @@
         slug: NavItem['slug'],
         navItems: NavItem[]
     ): NavItem | undefined => {
-        for (let i = 0; i < navItems.length; i++) {
-            const item = navItems[i];
-            if (slug === item.slug) {
-                return item;
-            } else if (item.children) {
-                return getCurrentNavItem(slug, item.children);
-            }
+
+      for (let i = 0; i < navItems.length; i++) {
+        const item = navItems[i];
+        if (slug === item.slug) {
+          return item;
+        } 
+        if (item.children) {
+          const matchingNavItem = getCurrentNavItem(slug, item.children);
+          if (matchingNavItem) {
+            return matchingNavItem
+          }
         }
+      }
     };
 
     const getCriteriaUrl = (slug) => `/${lang}/docs/${slug}`;
