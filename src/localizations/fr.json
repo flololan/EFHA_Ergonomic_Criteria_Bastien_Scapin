@@ -8,6 +8,12 @@
   "email_addresse": "Adresse e-mail",
   "firstname": "Prénom",
   "lastname": "Nom",
+  "localisation": {
+    "select_language": "Sélectionner la langue",
+    "fr": "Français",
+    "en": "Anglais",
+    "country_flag": "drapeau {country}"
+  },
   "contact_page": {
     "success_message": "Votre message a été envoyé avec succès!",
     "required_field": "Les champs avec le symbol (*) sont requis!",

@@ -1,18 +1,9 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
-  import { locale } from 'svelte-i18n'
+  import { locale, _ } from 'svelte-i18n'
+  import { LANGUAGES } from '$lib/const';
 
-  $: selectedLang = $locale
-  
-  const getUrlWithUpdatedLang = (prevLang: string, newLang: string): string => {
-    return `${location.href}/`.replace(`/${prevLang}/`, `/${newLang}/`)
-  }
-
-  $: {
-    if ($locale !== selectedLang) {
-      const localizedUrl = getUrlWithUpdatedLang($locale, selectedLang)
-      goto(localizedUrl)
-    }
+  const getUrlWithUpdatedLang = (newLang: string): string => {
+    return `${location.href}/`.replace(`/${$locale}/`, `/${newLang}/`)
   }
 </script>
 
@@ -23,22 +14,20 @@
 </style>
 
 <div class="btn-group ms-4" role="group" aria-label="select language">
-  <button 
-    type="button"
-    class="btn btn-outline-secondary p-1"
-    aria-label="french"
-    disabled={selectedLang === 'fr'}
-    on:click={() => selectedLang = 'fr'}
-  >
-    <img src="/assets/flag_fr.svg" alt="France flag"/>
-  </button>
-  <button
-    type="button"
-    class="btn btn-outline-secondary p-1"
-    aria-label="english"
-    disabled={selectedLang === 'en'}
-    on:click={() => selectedLang = 'en'}
-  >
-    <img src="/assets/flag_en.svg" alt="United Kingdom flag"/>
-  </button>
+  {#each Object.keys(LANGUAGES) as lang}
+    <a
+      role="button"
+      href={getUrlWithUpdatedLang(lang)}
+      class="btn btn-outline-secondary p-1"
+      aria-label={$_(`localisation.${$locale}`)}
+      class:disabled={$locale === lang}
+      aria-hidden={$locale === lang}
+      tabindex={$locale === lang ? -1 : 0}
+    >
+      <img
+        src={`/assets/flag_${lang}.svg`}
+        alt=""
+      />
+    </a>
+  {/each}
 </div>
