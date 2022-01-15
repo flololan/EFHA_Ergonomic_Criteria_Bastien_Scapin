@@ -1,4 +1,4 @@
-# Groupement/Distinction entre items
+# Groupement / Distinction entre items
 
 ## Définition
 

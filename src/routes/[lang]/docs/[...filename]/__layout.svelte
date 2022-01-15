@@ -6,6 +6,7 @@
         if (res.ok) {
             return {
                 props: {
+                    slug: params.filename,
                     md: await res.text(),
                 },
             };
@@ -21,19 +22,22 @@
 </script>
 
 <script lang="ts">
-    export let md: string;
+    import EditOnGithub from '$lib/components/EditOnGithub.svelte';
+    import { getMdAsHtml } from '$lib/mdToHtmlParser';
 
-    import { getMdAsHtml } from "$lib/mdToHtmlParser";
+    export let md: string;
+    export let slug: string;
 
     let html;
     $: html = getMdAsHtml(md, { pageSlug: location.pathname });
 </script>
 
-<article id="mainContent" class="criteria px-5 pt-4">
+<article id="mainContent" class="criteria position-relative px-5 pt-4">
     {@html html}
+    <EditOnGithub {slug} />
 </article>
 
-<style>
+<style lang="scss">
     .criteria {
         width: 80ch; /* 80 characters wide */
     }

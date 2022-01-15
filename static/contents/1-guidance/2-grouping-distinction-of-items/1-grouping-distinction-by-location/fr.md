@@ -1,4 +1,4 @@
-# Groupement/Distinction par la localisation
+# Groupement / Distinction par la localisation
 
 ## Définition
 

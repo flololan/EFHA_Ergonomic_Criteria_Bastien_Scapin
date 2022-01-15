@@ -1,4 +1,4 @@
-# Grouping / distinction by location
+# Grouping / Distinction by location
 
 ## Definition
 

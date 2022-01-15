@@ -20,5 +20,7 @@
       "lastname": "Please enter a last name longer than {length} characters",
       "email": "Please fill in a valid email like username@email.com"
     }
-  }
+  },
+  "edit_this_criteria": "Edit this criteria",
+  "on_github": "on Github"
 }

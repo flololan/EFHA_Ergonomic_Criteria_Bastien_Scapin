@@ -1,4 +1,4 @@
-# Groupement/Distinction par le format
+# Groupement / Distinction par le format
 
 ## Définition
 
