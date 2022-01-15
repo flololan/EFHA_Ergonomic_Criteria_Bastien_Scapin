@@ -14,6 +14,10 @@
     "en": "English",
     "country_flag": "{country} flag"
   },
+  "doc_nav": {
+    "close": "Close the criteria navigation",
+    "open": "Open the criteria navigation"
+  },
   "contact_page": {
     "success_message": "Your message has been sent successfully!",
     "required_field": "Fields with the symbol (*) are required!",

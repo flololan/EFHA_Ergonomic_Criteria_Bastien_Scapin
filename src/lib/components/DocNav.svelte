@@ -16,11 +16,11 @@
   aria-live="polite"
 >
   {#if showSidebar}
+    <CloseDocNavBtn bind:showSidebar class="top-0 end-0" />
     <h2 class="pb-3">{$_("criteria")}</h2>
     <div class="h-100 overflow-scroll">
       <DocNavItem nav={nav.children} />
     </div>
-    <CloseDocNavBtn bind:showSidebar class="top-0 end-0" />
   {/if} 
 </nav>
 
