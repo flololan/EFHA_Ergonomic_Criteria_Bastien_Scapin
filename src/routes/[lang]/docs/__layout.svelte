@@ -31,7 +31,8 @@
 
   export let nav: NavStructure;
 
-  let showSidebar = false
+  const isBigScreen = screen.width >= 769
+  let showSidebar = isBigScreen
 </script>
 
 <div class="d-flex position-relative" style="height: 100%; overflow: hidden">
