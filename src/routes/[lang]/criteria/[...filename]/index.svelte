@@ -37,6 +37,8 @@
   export let slug: string
   export let nav: NavStructure
 
+  $: slug = slug.replace(/\/$/, '')
+
   const getCurrentNavItem = (
     slug: NavItem['slug'],
     navItems: NavItem[]
