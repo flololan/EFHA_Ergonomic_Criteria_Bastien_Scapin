@@ -176,9 +176,7 @@
     </div>
 
     <div class="col-12">
-      <button class="btn btn-success" type="submit"
-        >{$_('contact_page.submit')}</button
-      >
+      <button class="btn btn-primary" type="submit">{$_('contact_page.submit')}</button>
     </div>
   </form>
   <MessageSentSuccess bind:show={showSuccess} />
