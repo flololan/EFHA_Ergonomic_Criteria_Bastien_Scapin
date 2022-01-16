@@ -15,11 +15,11 @@
   </ul>
 
   <p class="mb-3">
-    <a href={`${$locale}/legal-mentions`} class="link-dark">
+    <a href={`/${$locale}/assure/accessibility`} class="link-dark">
       {$_('footer.accessibility')}
     </a>
     | 
-    <a href={`${$locale}/legal-mentions`} class="link-dark">
+    <a href={`/${$locale}/legal-mentions`} class="link-dark">
       {$_('legal_mentions')}
     </a>
   </p>
