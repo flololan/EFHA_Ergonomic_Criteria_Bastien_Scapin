@@ -40,7 +40,7 @@
           on:click={onClick}
         />
       </div>
-      <div class="modal-body" />
+      <div class="modal-body">{$_('cookie_banner_description')}</div>
       <div class="modal-footer border-none">
         <button
           type="button"
