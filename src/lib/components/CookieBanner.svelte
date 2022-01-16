@@ -41,7 +41,7 @@
         />
       </div>
       <div class="modal-body">{$_('cookie_banner_description')}</div>
-      <div class="modal-footer border-none">
+      <div class="modal-footer border-0">
         <button
           type="button"
           class="btn btn-primary"
