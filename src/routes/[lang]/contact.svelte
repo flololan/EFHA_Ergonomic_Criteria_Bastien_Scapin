@@ -3,6 +3,7 @@
 
   import { isEmailValid } from '$lib/utils';
   import MessageSentSuccess from '$lib/components/MessageSentSuccess.svelte';
+  import Footer from '$lib/components/Footer.svelte';
 
   const MIN_NAME_LENGTH = 2
   const MIN_MESSAGE_LENGTH = 50
@@ -153,3 +154,5 @@
   </form>
   <MessageSentSuccess bind:show={showSuccess}/>
 </main>
+
+<Footer />

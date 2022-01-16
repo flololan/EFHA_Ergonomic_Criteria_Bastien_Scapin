@@ -1,12 +1,13 @@
 <script>
   import { REPO_LINK } from '$lib/const';
+  import { page } from '$app/stores'
 
 	import Links from './Links.svelte'
 
-  export let path
+  $: path = $page.url.pathname
 </script>
 
-<footer class="d-flex flex-column align-items-center mx-0 py-4 px-1 px-md-5 bg-light">
+<footer class="d-flex flex-column align-items-center mt-5 mx-0 py-4 px-1 px-md-5 bg-light">
   <ul class="d-flex ms-0 ps-0 mb-0">
     <Links {path} />
   </ul>

@@ -29,6 +29,7 @@
   import type { NavStructure } from '$lib/type'
   import { screen } from '$lib/stores'
   import ToggleDocNavBtn from '$lib/components/ToggleDocNavBtn.svelte'
+  import Footer from '$lib/components/Footer.svelte'
 
   export let nav: NavStructure
 
@@ -48,8 +49,11 @@
 <div class="d-flex position-relative" style="height: 100%; overflow: hidden">
   <DocNav {nav} bind:showSidebar />
 
-  <main id="mainContent" class="w-100 overflow-scroll">
-    <ToggleDocNavBtn bind:showSidebar />
-    <slot />
-  </main>
+  <div class="w-100 overflow-scroll">
+    <main id="mainContent">
+      <ToggleDocNavBtn bind:showSidebar />
+      <slot />
+    </main>
+    <Footer />
+  </div>
 </div>
