@@ -21,11 +21,9 @@
   <div
     class="modal fade show d-block"
     id={MODAL_ID}
-    tabindex="-1"
     role="alertdialog"
     aria-modal="true"
     aria-labelledby={MODAL_TITLE_ID}
-    aria-hidden={show}
     use:focusTrap
   >
     <div class="modal-dialog">
@@ -34,9 +32,6 @@
           <h5 class="modal-title" id={MODAL_TITLE_ID}>
             {$_('do_you_want_some_cookies')}
           </h5>
-          {#if dev}
-            <button type="button" class="btn-close" aria-label={$_('close')} />
-          {/if}
         </div>
         <div class="modal-body">{$_('cookie_banner_description')}</div>
         <div class="modal-footer border-0">
@@ -55,6 +50,10 @@
 {/if}
 
 <style lang="scss">
+  .modal {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
   .modal-dialog {
     position: absolute;
     bottom: 0;
@@ -65,6 +64,6 @@
 
   .modal-title::before,
   .modal-title::after {
-    content: '🍪';
+    content: ' 🍪 ';
   }
 </style>
