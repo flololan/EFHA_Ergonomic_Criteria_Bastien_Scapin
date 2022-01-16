@@ -4,12 +4,15 @@
   import { _ } from 'svelte-i18n'
   import CheckLg from '$lib/svg/CheckLg.svelte'
   import X from '$lib/svg/X.svelte'
+  import { availabilityStore } from '$lib/stores'
 
   const MODAL_ID = 'cookieBanner'
   const MODAL_TITLE_ID = 'cookieBannerLabel'
   const LOCALSTORAGE_KEY = 'goodCookies'
 
   let show: boolean = localStorage.getItem(LOCALSTORAGE_KEY) === null
+
+  $: $availabilityStore.isFocusTrapAvailable = !show
 
   const onClick = () => {
     show = false

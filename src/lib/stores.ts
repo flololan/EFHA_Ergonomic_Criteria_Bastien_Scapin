@@ -17,3 +17,21 @@ const createScreenStore = () => {
 }
 
 export const screen = createScreenStore()
+
+interface AvailibityStore {
+  isFocusTrapAvailable: boolean;
+}
+
+const createAvailabilityStore = () => {
+  const { subscribe, update, set } = writable<AvailibityStore>({
+    isFocusTrapAvailable: true
+  } as AvailibityStore)
+
+  return {
+    subscribe,
+    update,
+    set
+  }
+}
+
+export const availabilityStore = createAvailabilityStore()

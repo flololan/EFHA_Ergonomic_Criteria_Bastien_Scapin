@@ -3,7 +3,7 @@
   import { focusTrap } from 'svelte-focus-trap'
 
   import type { NavStructure } from '$lib/type'
-  import { screen } from '$lib/stores'
+  import { screen, availabilityStore } from '$lib/stores'
 
   import CloseDocNavBtn from './CloseDocNavBtn.svelte'
   import DocNavItem from './DocNavItem.svelte'
@@ -26,20 +26,37 @@
   aria-live="polite"
 >
   {#if showSidebar}
-    <div use:focusTrap class="h-100">
-      <CloseDocNavBtn bind:showSidebar class="top-0 end-0" />
-      <h2 class="pb-3">{$_('criteria')}</h2>
-      <div class="h-100 overflow-scroll">
-        <DocNavItem
-          nav={nav.children}
-          on:navItemClicked={() => {
-            if ($screen.device === 'mobile') {
-              showSidebar = false
-            }
-          }}
-        />
+    {#if $availabilityStore.isFocusTrapAvailable && $screen.device === 'mobile'}
+      <div use:focusTrap class="h-100">
+        <CloseDocNavBtn bind:showSidebar class="top-0 end-0" />
+        <h2 class="pb-3">{$_('criteria')}</h2>
+        <div class="h-100 overflow-scroll">
+          <DocNavItem
+            nav={nav.children}
+            on:navItemClicked={() => {
+              if ($screen.device === 'mobile') {
+                showSidebar = false
+              }
+            }}
+          />
+        </div>
       </div>
-    </div>
+    {:else}
+      <div class="h-100">
+        <CloseDocNavBtn bind:showSidebar class="top-0 end-0" />
+        <h2 class="pb-3">{$_('criteria')}</h2>
+        <div class="h-100 overflow-scroll">
+          <DocNavItem
+            nav={nav.children}
+            on:navItemClicked={() => {
+              if ($screen.device === 'mobile') {
+                showSidebar = false
+              }
+            }}
+          />
+        </div>
+      </div>
+    {/if}
   {/if}
 </nav>
 
