@@ -2,7 +2,7 @@
   import { focusTrap } from 'svelte-focus-trap'
   import { _ } from 'svelte-i18n'
   import CheckLg from '$lib/svg/CheckLg.svelte'
-  import XLg from '$lib/svg/XLg.svelte'
+  import X from '$lib/svg/X.svelte'
 
   const MODAL_ID = 'cookieBanner'
   const MODAL_TITLE_ID = 'cookieBannerLabel'
@@ -48,7 +48,7 @@
           data-bs-dismiss="modal"
           on:click={onClick}
         >
-          <span class="me-1" aria-hidden="true"><XLg /></span>
+          <span class="me-1" aria-hidden="true"><X /></span>
           {$_('refuse')}
         </button>
         <button
