@@ -31,10 +31,13 @@
   import { DEFAULT_LANG } from '$lib/const'
   import type { NavItem } from '$lib/type'
   import EditOnGithub from '$lib/components/EditOnGithub.svelte'
+  import { getPageTitle } from '$lib/utils'
 
   export let md: string
   export let slug: string
   export let nav: NavStructure
+
+  $: slug = slug.replace(/\/$/, '')
 
   const getCurrentNavItem = (
     slug: NavItem['slug'],
@@ -56,6 +59,11 @@
 
   const getCriteriaUrl = (slug) => `/${lang}/criteria/${slug}`
 
+  const getLocalPageTitle = (navItem: NavItem | undefined) =>
+    getPageTitle(
+      `${$_('criterion')} ${navItem?.title[$locale ?? DEFAULT_LANG]}`
+    )
+
   $: lang = ($locale as Lang | null | undefined) ?? DEFAULT_LANG
   $: html = getMdAsHtml(md, { pageSlug: location.pathname })
 
@@ -63,6 +71,10 @@
   $: prev = currentNavItem?.previous
   $: next = currentNavItem?.next
 </script>
+
+<svelte:head>
+  <title>{getLocalPageTitle(currentNavItem)}</title>
+</svelte:head>
 
 <article id="mainContent" class="criteria position-relative px-5 pt-4">
   {@html html}
