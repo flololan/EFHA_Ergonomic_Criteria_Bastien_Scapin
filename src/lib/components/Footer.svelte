@@ -9,7 +9,7 @@
   $: path = $page.url.pathname
 </script>
 
-<footer class="d-flex flex-column align-items-center mt-5 mx-0 py-4 px-1 px-md-5 bg-primary text-light">
+<footer class="d-flex flex-column align-items-center mt-5 mx-0 py-4 px-1 px-md-5 text-light">
   <ul class="d-flex ms-0 ps-0 mb-0">
     <Links {path} />
   </ul>
@@ -37,3 +37,9 @@
     <a href={REPO_LINK} target="_blank" class="link-light">open source</a>.
   </p>
 </footer>
+
+<style>
+  footer {
+    background: #4D49E3;
+  }
+</style>

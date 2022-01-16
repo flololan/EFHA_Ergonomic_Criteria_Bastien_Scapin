@@ -10,8 +10,7 @@
 </svelte:head>
 
 <header id="mainContent" class="position-relative">
-  <img src="/assets/banner.svg" alt="" class="banner position-absolute t-0 l-0 w-100">
-  <div class="container text-light">
+  <div class="container text-white">
     <div class="row">
       <div class="col-sm-12">
         <div class="main-banner">
@@ -43,11 +42,6 @@
 <Footer />
 
 <style lang="scss">
-  .banner {
-    z-index: -1;
-    display: none;
-  }
-  
   header {
     background: url("/assets/banner.svg");
     background-repeat-y: no-repeat;
