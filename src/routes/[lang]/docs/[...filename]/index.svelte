@@ -30,6 +30,7 @@
     import { _, locale } from 'svelte-i18n';
     import { DEFAULT_LANG } from '$lib/const';
     import type { NavItem } from '$lib/type';
+    import EditOnGithub from '$lib/components/EditOnGithub.svelte';
 
     export let md: string;
     export let slug: string;
@@ -39,19 +40,18 @@
         slug: NavItem['slug'],
         navItems: NavItem[]
     ): NavItem | undefined => {
-
-      for (let i = 0; i < navItems.length; i++) {
-        const item = navItems[i];
-        if (slug === item.slug) {
-          return item;
-        } 
-        if (item.children) {
-          const matchingNavItem = getCurrentNavItem(slug, item.children);
-          if (matchingNavItem) {
-            return matchingNavItem
-          }
+        for (let i = 0; i < navItems.length; i++) {
+            const item = navItems[i];
+            if (slug === item.slug) {
+                return item;
+            }
+            if (item.children) {
+                const matchingNavItem = getCurrentNavItem(slug, item.children);
+                if (matchingNavItem) {
+                    return matchingNavItem;
+                }
+            }
         }
-      }
     };
 
     const getCriteriaUrl = (slug) => `/${lang}/docs/${slug}`;
@@ -64,22 +64,30 @@
     $: next = currentNavItem?.next;
 </script>
 
-<article class="criteria px-3 px-md-5 pt-4">
+<article id="mainContent" class="criteria position-relative px-5 pt-4">
     {@html html}
-    <div class="row d-flex justify-content-between px-4 my-5">
+    <EditOnGithub {slug} />
+    <div class="row d-flex justify-content-between my-5">
         {#if prev}
-            <a class="btn btn-outline-secondary btn-sm col-9 col-md-5" href={getCriteriaUrl(prev)}>
+            <a
+                class="btn btn-outline-secondary btn-sm col-9 col-md-5"
+                href={getCriteriaUrl(prev)}
+            >
                 <span class="me-1" aria-hidden="true">←</span>
                 {$_('previous_criteria')}
             </a>
         {/if}
         {#if next}
-            <a class="btn btn-outline-secondary btn-sm col-9 col-md-5 ms-auto mt-2 mt-md-0" href={getCriteriaUrl(next)}>
+            <a
+                class="btn btn-outline-secondary btn-sm col-9 col-md-5 ms-auto mt-2 mt-md-0"
+                href={getCriteriaUrl(next)}
+            >
                 {$_('next_criteria')}<span class="ms-1" aria-hidden="true">
                     →</span
                 >
             </a>
         {/if}
+    </div>
 </article>
 
 <style>

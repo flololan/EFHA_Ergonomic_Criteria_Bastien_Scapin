@@ -9,3 +9,4 @@ node_modules
 !.env.example
 
 /static/content-index.json
+/static/sitemap.xml

@@ -1,4 +1,5 @@
-import type { Lang, NavItem, NavTitles } from '$lib/type'
+import type { NavItem, NavTitles } from '$lib/type'
+import { LANGS } from '../lib/const'
 import fs from 'fs'
 import path from 'path'
 
@@ -9,14 +10,12 @@ import path from 'path'
 const SRC_DIR = 'static/contents'
 const DST_FILE = 'static/content-index.json'
 
-const LANGS: Readonly<Lang[]> = ['fr', 'en'] as const
-
 const getDirs = (p: string): string[] => {
     return fs.readdirSync(p).filter(f => fs.statSync(path.join(p, f)).isDirectory())
 }
 
 const getTitles = (dir: string, slug: string) => {
-    const readTitleInFile = (file) => {
+    const readTitleInFile = (file: string) => {
         try {
             const content = fs.readFileSync(file)
             return content.slice(2, content.indexOf('\n')).toString()

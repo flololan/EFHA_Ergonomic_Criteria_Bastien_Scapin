@@ -1,20 +1,14 @@
 <script lang="ts">
-  import { locale, _ } from 'svelte-i18n'
-  import { LANGUAGES } from '$lib/const';
+  import { locale, _ } from 'svelte-i18n';
+  import { LANGS } from '$lib/const';
 
   const getUrlWithUpdatedLang = (newLang: string): string => {
-    return `${location.href}/`.replace(`/${$locale}/`, `/${newLang}/`)
-  }
+    return `${location.href}/`.replace(`/${$locale}/`, `/${newLang}/`);
+  };
 </script>
 
-<style>
-  img {
-    height: 1.3rem;
-  }
-</style>
-
 <div class="btn-group ms-4" role="group" aria-label="select language">
-  {#each Object.keys(LANGUAGES) as lang}
+  {#each Object.keys(LANGS) as lang}
     <a
       role="button"
       href={getUrlWithUpdatedLang(lang)}
@@ -24,10 +18,13 @@
       aria-hidden={$locale === lang}
       tabindex={$locale === lang ? -1 : 0}
     >
-      <img
-        src={`/assets/flag_${lang}.svg`}
-        alt=""
-      />
+      <img src={`/assets/flag_${lang}.svg`} alt="" />
     </a>
   {/each}
 </div>
+
+<style>
+  img {
+    height: 1.3rem;
+  }
+</style>

@@ -31,8 +31,8 @@
       "email": "Please fill in a valid email like username@email.com"
     }
   },
-  "edit_this_criteria": "Edit this criteria",
+  "edit_this_criterion": "Edit this criterion",
   "on_github": "on Github",
-  "previous_criteria": "Previous criteria",
-  "next_criteria": "Next criteria"
+  "previous_criterion": "Previous criteria",
+  "next_criterion": "Next criteria"
 }

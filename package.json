@@ -1,10 +1,11 @@
 {
   "name": "efha-ergonomic-criteria-bastien-scapin",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "predev": "yarn generate-index",
     "dev": "svelte-kit dev",
-    "prebuild": "yarn generate-index",
+    "prebuild": "yarn generate-index && yarn generate-sitemap",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
     "prepreview": "yarn generate-index",
@@ -12,7 +13,8 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "eslint --ignore-path .gitignore .",
-    "generate-index": "node --loader ts-node/esm src/scripts/generate-index.ts"
+    "generate-index": "yarn ts-node-dev --project ./ts-node-config.json --files src/scripts/generate-index.ts",
+    "generate-sitemap": "yarn ts-node-dev --project ./ts-node-config.json --files src/scripts/generate-sitemap.ts"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
@@ -31,7 +33,9 @@
     "svelte-focus-trap": "^1.2.0",
     "svelte-i18n": "^3.3.13",
     "svelte-preprocess": "^4.9.4",
+    "svelte-sitemap": "^2.2.0",
     "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
     "tslib": "^2.3.1",
     "typescript": "^4.4.3",
     "yarn-run-all": "^3.1.1"
