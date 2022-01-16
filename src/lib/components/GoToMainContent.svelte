@@ -4,7 +4,7 @@
 
 <style>
   a {
-    z-index: 3;
+    z-index: 5;
   }
 </style>
 

@@ -64,27 +64,28 @@
     $: next = currentNavItem?.next;
 </script>
 
-<article id="mainContent" class="criteria px-5 pt-4">
+<article class="criteria px-3 px-md-5 pt-4">
     {@html html}
-    <div class="row d-flex justify-content-between my-5">
+    <div class="row d-flex justify-content-between px-4 my-5">
         {#if prev}
-            <a class="btn btn-outline-secondary col-9 col-md-5" href={getCriteriaUrl(prev)}>
+            <a class="btn btn-outline-secondary btn-sm col-9 col-md-5" href={getCriteriaUrl(prev)}>
                 <span class="me-1" aria-hidden="true">←</span>
                 {$_('previous_criteria')}
             </a>
         {/if}
         {#if next}
-            <a class="btn btn-outline-secondary col-9 col-md-5 ms-auto mt-3 mt-md-0" href={getCriteriaUrl(next)}>
+            <a class="btn btn-outline-secondary btn-sm col-9 col-md-5 ms-auto mt-2 mt-md-0" href={getCriteriaUrl(next)}>
                 {$_('next_criteria')}<span class="ms-1" aria-hidden="true">
                     →</span
                 >
             </a>
         {/if}
-    </div>
 </article>
 
 <style>
-    .criteria {
-        width: 80ch; /* 80 characters wide */
+    article {
+        width: 80ch;
+        max-width: 100%;
+        text-align: justify;
     }
 </style>
