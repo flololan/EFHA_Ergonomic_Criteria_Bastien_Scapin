@@ -9,7 +9,7 @@
   $: path = $page.url.pathname
 </script>
 
-<footer class="d-flex flex-column align-items-center mt-5 mx-0 py-4 px-1 px-md-5 text-light">
+<footer class="d-flex flex-column align-items-center mt-5 mx-0 py-4 px-1 px-md-5 text-white">
   <ul class="d-flex ms-0 ps-0 mb-0">
     <Links {path} />
   </ul>
@@ -41,5 +41,9 @@
 <style>
   footer {
     background: #4D49E3;
+  }
+
+  footer :global(a) {
+    color: white !important;
   }
 </style>
