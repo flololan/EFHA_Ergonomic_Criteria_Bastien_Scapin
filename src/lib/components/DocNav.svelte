@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { _ } from "svelte-i18n";
-  import { focusTrap } from 'svelte-focus-trap'
+  import { _ } from 'svelte-i18n';
+  import { focusTrap } from 'svelte-focus-trap';
 
-  import type { NavStructure } from "$lib/type";
-  import { screen } from "$lib/stores";
+  import type { NavStructure } from '$lib/type';
+  import { screen } from '$lib/stores';
 
-  import CloseDocNavBtn from "./CloseDocNavBtn.svelte";
-  import DocNavItem from "./DocNavItem.svelte";
+  import CloseDocNavBtn from './CloseDocNavBtn.svelte';
+  import DocNavItem from './DocNavItem.svelte';
 
   export let nav: NavStructure;
-  export let showSidebar = true
+  export let showSidebar = true;
 </script>
 
 <nav
@@ -20,26 +20,26 @@
   {#if showSidebar}
     <div use:focusTrap class="h-100">
       <CloseDocNavBtn bind:showSidebar class="top-0 end-0" />
-      <h2 class="pb-3">{$_("criteria")}</h2>
+      <h2 class="pb-3">{$_('criteria')}</h2>
       <div class="h-100 overflow-scroll">
         <DocNavItem
           nav={nav.children}
           on:navItemClicked={() => {
             if ($screen.device === 'mobile') {
-              showSidebar = false
+              showSidebar = false;
             }
-          }} 
+          }}
         />
       </div>
     </div>
-  {/if} 
+  {/if}
 </nav>
 
 <style>
   nav {
     z-index: 2;
   }
-  @media (max-width: 767px) { 
+  @media (max-width: 767px) {
     nav {
       position: absolute !important;
       width: 100%;
