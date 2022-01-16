@@ -27,12 +27,22 @@
 <script lang="ts">
   import DocNav from "$lib/components/DocNav.svelte";
   import type { NavStructure } from "$lib/type";
+  import { screen } from "$lib/stores";
   import ToggleDocNavBtn from "$lib/components/ToggleDocNavBtn.svelte";
 
   export let nav: NavStructure;
 
-  const isBigScreen = screen.width >= 769
-  let showSidebar = isBigScreen
+  let showSidebar = $screen.device === 'computer'
+  let device = $screen.device
+
+  screen.subscribe((value) => {
+    if (value.device !== device) {
+      if (value.device === 'computer') {
+        showSidebar = true
+      }
+      device = value.device
+    }
+  });
 </script>
 
 <div class="d-flex position-relative" style="height: 100%; overflow: hidden">

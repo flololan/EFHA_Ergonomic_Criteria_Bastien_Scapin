@@ -3,6 +3,7 @@
   import { focusTrap } from 'svelte-focus-trap'
 
   import type { NavStructure } from "$lib/type";
+  import { screen } from "$lib/stores";
 
   import CloseDocNavBtn from "./CloseDocNavBtn.svelte";
   import DocNavItem from "./DocNavItem.svelte";
@@ -21,7 +22,14 @@
       <CloseDocNavBtn bind:showSidebar class="top-0 end-0" />
       <h2 class="pb-3">{$_("criteria")}</h2>
       <div class="h-100 overflow-scroll">
-        <DocNavItem nav={nav.children} />
+        <DocNavItem
+          nav={nav.children}
+          on:navItemClicked={() => {
+            if ($screen.device === 'mobile') {
+              showSidebar = false
+            }
+          }} 
+        />
       </div>
     </div>
   {/if} 
@@ -31,7 +39,7 @@
   nav {
     z-index: 2;
   }
-  @media (max-width: 769px) { 
+  @media (max-width: 767px) { 
     nav {
       position: absolute !important;
       width: 100%;
