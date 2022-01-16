@@ -29,7 +29,7 @@
                 class="p-2"
                 alt={`${window.location.hostname} page logo`}
             />
-            <h1 class="d-none d-md-block ms-1 mb-0 fs-4">{TITLE}</h1>
+            <p class="d-none d-md-block ms-1 mb-0 fs-4">{TITLE}</p>
         </a>
         <ul class="d-flex ms-auto mb-0">
             <Links {path} />
@@ -44,7 +44,7 @@
         display: block;
     }
 
-    h1 {
+    p {
         line-height: 2.5em;
     }
 
