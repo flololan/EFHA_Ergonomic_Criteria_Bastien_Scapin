@@ -1,9 +1,10 @@
 import showdown from "showdown"
 
 const classMap = {
-  h1: 'mt-5 mt-xxl-0',
-  h3: 'mt-5',
-  h4: 'mt-4',
+  h1: 'text-start mt-5 mt-xxl-0',
+  h2: 'text-start',
+  h3: 'text-start mt-5',
+  h4: 'text-start mt-4',
   ul: 'list-group list-group-flush',
   li: 'list-group-item',
   pre: 'rounded-2',
