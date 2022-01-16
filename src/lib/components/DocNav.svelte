@@ -1,16 +1,24 @@
 <script lang="ts">
-  import { _ } from 'svelte-i18n';
-  import { focusTrap } from 'svelte-focus-trap';
+  import { _ } from 'svelte-i18n'
+  import { focusTrap } from 'svelte-focus-trap'
 
-  import type { NavStructure } from '$lib/type';
-  import { screen } from '$lib/stores';
+  import type { NavStructure } from '$lib/type'
+  import { screen } from '$lib/stores'
 
-  import CloseDocNavBtn from './CloseDocNavBtn.svelte';
-  import DocNavItem from './DocNavItem.svelte';
+  import CloseDocNavBtn from './CloseDocNavBtn.svelte'
+  import DocNavItem from './DocNavItem.svelte'
 
-  export let nav: NavStructure;
-  export let showSidebar = true;
+  export let nav: NavStructure
+  export let showSidebar = true
+
+  const handleEscapePress = (event: KeyboardEvent) => {
+    if (event.key === 'Escape' && showSidebar && $screen.device === 'mobile') {
+      showSidebar = false
+    }
+  }
 </script>
+
+<svelte:window on:keydown={handleEscapePress} />
 
 <nav
   class="position-relative doc-nav px-3 pt-4 border-end bg-light h-100"
@@ -26,7 +34,7 @@
           nav={nav.children}
           on:navItemClicked={() => {
             if ($screen.device === 'mobile') {
-              showSidebar = false;
+              showSidebar = false
             }
           }}
         />
