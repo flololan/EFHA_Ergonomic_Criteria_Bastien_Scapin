@@ -2,6 +2,20 @@ export const LANGS = [ 'en', 'fr'] as const
 export const DEFAULT_LANG = 'en'
 
 export const TITLE = 'is-ergonomic'
+export const DEVS = [
+  {
+    name: '@johannchopin',
+    link: 'https://github.com/johannchopin'
+  },
+  {
+    name: '@Alexandre Guidoux',
+    link: 'https://github.com/Lyokolux'
+  },
+  {
+    name: '@Florian Weiss',
+    link: 'https://fweiss.com/'
+  }
+]
 
 export const NAVI_HIERARCHY_RESOURCE = "/content-index.json";
 

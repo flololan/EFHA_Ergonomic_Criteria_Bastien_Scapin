@@ -8,6 +8,7 @@
   "email_addresse": "Email address",
   "firstname": "First name",
   "lastname": "Last name",
+  "legal_mentions": "Legal Mentions",
   "localisation": {
     "select_language": "Select language",
     "fr": "French",
@@ -39,5 +40,9 @@
   "accept": "Accept",
   "close": "Close",
   "cookie_banner_description": "We value your privacy... ",
-  "do_you_want_some_cookies": "Do you want some cookies ?"
+  "do_you_want_some_cookies": "Do you want some cookies ?",
+  "footer": {
+    "build_with_love": "Build with {love} &nbsp;by",
+    "love": "Love"
+  }
 }
