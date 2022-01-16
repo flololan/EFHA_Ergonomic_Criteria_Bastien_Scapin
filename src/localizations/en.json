@@ -43,6 +43,8 @@
   "do_you_want_some_cookies": "Do you want some cookies ?",
   "footer": {
     "build_with_love": "Build with {love} &nbsp;by",
-    "love": "Love"
+    "love": "Love",
+    "website_is": "This website is",
+    "accessibility": "Accessibility: partially compliant"
   }
 }

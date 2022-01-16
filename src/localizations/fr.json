@@ -43,6 +43,8 @@
   "do_you_want_some_cookies": "Voulez-vous des cookies ?",
   "footer": {
     "build_with_love": "Construits avec {love} &nbsp;par",
-    "love": "Amour"
+    "love": "Amour",
+    "website_is": "Ce site est",
+    "accessibility": "Accessibilité : partiellement conforme"
   }
 }
