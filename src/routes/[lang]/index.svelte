@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { _ } from 'svelte-i18n'
+  import { _, locale } from 'svelte-i18n'
 
   import { TITLE } from '$lib/const'
   import Footer from '$lib/components/Footer.svelte'
@@ -17,17 +17,10 @@
           <div class="d-sm-flex justify-content-between">
             <div data-aos="zoom-in-up" class="aos-init aos-animate">
               <div class="banner-title">
-                  <h3 class="font-weight-medium">We Help Power
-                  Millions Of Businesses 
-                  in 100+ Countries
-                </h3>
+                  <h1 class="font-weight-medium">{$_('homepage.title')}</h1>
               </div>
-              <p class="mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-
-                <br>
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              </p>
-              <a href="#" class="btn btn-outline-light mt-3">Learn more</a>
+              <p class="mt-3">{$_('homepage.subtitle')}</p>
+              <a href={`/${$locale}/criteria`} class="btn btn-outline-light mt-3">{$_('homepage.goto_criteria')}</a>
             </div>
             <div class="mt-5 mt-lg-0">
               <img src="/assets/banner-illustration.png" alt="marsmello" class="img-fluid aos-init aos-animate" data-aos="zoom-in-up">
@@ -51,5 +44,11 @@
 
   .main-banner {
     padding: 4.2rem 0 14rem 0;
+  }
+
+  @media (max-width: 767px) {
+    header {
+      padding-top: 0 !important;;
+    }
   }
 </style>
