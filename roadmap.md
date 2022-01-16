@@ -3,47 +3,45 @@
 ## Fonctionnalitées générales
 - [x] Multilangual (option)
   - [x] Language selector in NAV
-  - [ ] Default to the language of the browser on first browse
+  - [x] Default to the language of the browser on first browse
 - [ ] Barre de recherche au niveau des critères
 - [x] "Go to content"-Button / Skip-Link
-- [ ] Theme light, Theme High contrast
+~~- [ ] Theme light, Theme High contrast~~
 - [ ] No/little animation-mode
 - [x] Cookie-Pop-Up needs to be accessible (Si on utilise pas de cookies juste du text expliquant bla bla, SHOW YOUR MUSCLES)
-- [ ] Titre des pages
+- [x] Titre des pages
 
 ## Fonctionnalité spécifique à certaines pages
 ## Footer
-- [ ] Impressum/Mention legales/Cookies
-- [ ] Niveau d'accessibilité
+
+- [x] Impressum/Mention legales/Cookies
+- [x] Niveau d'accessibilité
 - [x] Sitemap --> XML
-- [ ] Menu
+- [x] Menu
 
 ## Contenu Homepage
 
-Fancy welcome page with call to action (go to "About" and go to "Methods")
+- [ ] Contenu
 
+## Présentations de critères
 
-## About
-
-Resumé et autre?
+- [ ] Présentation des critères de Bastien et Scapin
 - [ ] Importance de l'accesibilité
-- [ ] Regle dans les pays
-- [ ] comparaison critère bastien scapin et accessibilité
-- [ ] Lien vers la Roadmap
+- [ ] Lien entre ces critères et l'accessibilité
 
 ## Page avec méthodes/contenu
-- [x] fichier markdown pour chaque methode --> Site static
+- [x] fichier markdown pour chaque methode --> Site statique
   - [x] fr
   - [x] en
 - [x] Boutons de navigation (got to next method, go to previous method)
 - [x] Barre latérale de navigation structurée en liste et sous-liste
-- [x] Bouton editer --> go to the README on GitHub (Optional)
+- [x] Bouton éditer --> go to the README on GitHub (Optional)
 
 ## Contact page
 - [x] Fields
   - [X] Prénom + Nom / Pseudo
   - [X] Email
-  - [ ] Telephone
+  ~~- [ ] Telephone~~
   - [X] Message
 - [x] Error checking
 
