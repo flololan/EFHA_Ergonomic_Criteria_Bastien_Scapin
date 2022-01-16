@@ -1,5 +1,6 @@
 <script context="module" lang="ts">
   import { waitLocale } from 'svelte-i18n'
+  import CookieBanner from '$lib/components/CookieBanner.svelte'
   import '../i18n'
 
   export async function load(): Promise<Record<string, never>> {
@@ -28,6 +29,7 @@
 </script>
 
 <svelte:window bind:innerHeight={windowHeight} bind:innerWidth={windowWidth} />
+<CookieBanner />
 
 <GoToMainContent />
 <slot />
