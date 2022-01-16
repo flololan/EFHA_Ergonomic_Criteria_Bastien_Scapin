@@ -1,7 +1,9 @@
 # Todo 
 
 ## Fonctionnalitées générales
-- [x] Multilangual (option) --> Language selector in NAV
+- [x] Multilangual (option)
+  - [x] Language selector in NAV
+  - [ ] Default to the language of the browser on first browse
 - [ ] Barre de recherche au niveau des critères
 - [x] "Go to content"-Button / Skip-Link
 - [ ] Theme light, Theme High contrast
