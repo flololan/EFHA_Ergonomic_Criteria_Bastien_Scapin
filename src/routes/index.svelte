@@ -1,8 +1,10 @@
 <script context="module" lang="ts">
-  export async function load(): Promise<Record<string, string|number>> {
+  import { getLocaleFromNavigator } from 'svelte-i18n'
+
+  export async function load(): Promise<Record<string, string | number>> {
     return {
       status: 303,
-      redirect: '/en'
+      redirect: `/${getLocaleFromNavigator()?.slice(0, 2)}`,
     }
   }
 </script>
