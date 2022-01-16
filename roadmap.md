@@ -7,6 +7,7 @@
 - [ ] Theme light, Theme High contrast
 - [ ] No/little animation-mode
 - [ ] Cookie-Pop-Up needs to be accessible (Si on utilise pas de cookies juste du text expliquant bla bla, SHOW YOUR MUSCLES)
+- [ ] Titre des pages
 
 ## Fonctionnalité spécifique à certaines pages
 ## Footer
