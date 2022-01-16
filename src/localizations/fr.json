@@ -34,5 +34,8 @@
   "edit_this_criterion": "Éditer ce critère",
   "on_github": "sur Github",
   "next_criterion": "Critère suivant",
-  "previous_criterion": "Critère précédent"
+  "previous_criterion": "Critère précédent",
+  "refuse": "Accept",
+  "accept": "Accepter",
+  "close": "Fermer"
 }
