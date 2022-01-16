@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
   export async function load({ params, fetch, stuff }) {
-    const res = await fetch(`/legals/${params.lang}.md`);
+    const res = await fetch(`/legals/mentions/${params.lang}.md`);
     if (res.ok) {
       return {
         props: {
