@@ -14,7 +14,7 @@
     <Links {path} />
   </ul>
 
-  <p class="mb-3">
+  <p class="mb-3 text-center">
     <a href={`/${$locale}/assure/accessibility`} class="link-dark">
       {$_('footer.accessibility')}
     </a>
