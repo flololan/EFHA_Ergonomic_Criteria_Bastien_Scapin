@@ -12,7 +12,7 @@
   $: selectedLang = $locale as Lang;
 
   let base_url: string;
-  $: base_url = `/${selectedLang}/docs`;
+  $: base_url = `/${selectedLang}/criteria`;
 
   const buildUrl = (naviItem: NavItem) => {
       return `${base_url}/${naviItem.slug}`;

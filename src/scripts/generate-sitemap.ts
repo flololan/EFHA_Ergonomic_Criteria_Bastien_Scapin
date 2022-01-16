@@ -8,7 +8,7 @@ const LAST_MOD = "2022-01-18"
 const PAGES = [
   "",
   "contact",
-  "docs",
+  "criteria",
 ]
 
 const nav: NavStructure = JSON.parse(fs.readFileSync(`./static${NAVI_HIERARCHY_RESOURCE}`).toString())

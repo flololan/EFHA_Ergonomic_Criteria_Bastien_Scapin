@@ -8,9 +8,9 @@
 <li class="nav-item">
 	<a
 		class="nav-link"
-		class:active={path.includes('/docs')}
+		class:active={path.includes('/criteria')}
 		rel="prefetch"
-		href={`/${$locale}/docs`}>{$_("criteria")}</a
+		href={`/${$locale}/criteria`}>{$_("criteria")}</a
 	>
 </li>
 <li class="nav-item">

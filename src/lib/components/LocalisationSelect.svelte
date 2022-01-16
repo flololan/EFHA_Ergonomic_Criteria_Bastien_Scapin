@@ -1,17 +1,18 @@
 <script lang="ts">
   import { locale, _ } from 'svelte-i18n';
   import { LANGS } from '$lib/const';
+  import { page } from '$app/stores';
 
-  const getUrlWithUpdatedLang = (newLang: string): string => {
-    return `${location.href}/`.replace(`/${$locale}/`, `/${newLang}/`);
+  const getUrlWithUpdatedLang = (url: string, newLang: string): string => {
+    return `${url}/`.replace(`/${$locale}/`, `/${newLang}/`);
   };
 </script>
 
 <div class="btn-group ms-4" role="group" aria-label="select language">
-  {#each Object.keys(LANGS) as lang}
+  {#each LANGS as lang}
     <a
       role="button"
-      href={getUrlWithUpdatedLang(lang)}
+      href={getUrlWithUpdatedLang($page.url.href, lang)}
       class="btn btn-outline-secondary p-1"
       aria-label={$_(`localisation.${$locale}`)}
       class:disabled={$locale === lang}

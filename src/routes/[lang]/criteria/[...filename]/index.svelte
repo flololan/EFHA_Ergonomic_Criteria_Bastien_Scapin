@@ -54,7 +54,7 @@
         }
     };
 
-    const getCriteriaUrl = (slug) => `/${lang}/docs/${slug}`;
+    const getCriteriaUrl = (slug) => `/${lang}/criteria/${slug}`;
 
     $: lang = ($locale as Lang | null | undefined) ?? DEFAULT_LANG;
     $: html = getMdAsHtml(md, { pageSlug: location.pathname });
