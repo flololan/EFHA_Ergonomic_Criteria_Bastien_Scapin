@@ -1,16 +1,18 @@
 <script context="module" lang="ts">
-  import { locale } from "svelte-i18n";
+  import { locale } from 'svelte-i18n'
 
   export async function load({ params }): Promise<Record<string, never>> {
-    await locale.set(params.lang);
-    return {};
+    await locale.set(params.lang)
+    return {}
   }
 </script>
 
 <script lang="ts">
-  import Navbar from "$lib/components/Navbar.svelte";
+  import Navbar from '$lib/components/Navbar.svelte'
+  import CookieBanner from '$lib/components/CookieBanner.svelte'
 </script>
 
+<CookieBanner />
 <Navbar />
 
 <slot />
