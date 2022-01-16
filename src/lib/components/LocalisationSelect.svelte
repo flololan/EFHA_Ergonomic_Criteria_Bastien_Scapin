@@ -4,8 +4,7 @@
   import { page } from '$app/stores';
 
   const getUrlWithUpdatedLang = (url: string, newLang: string): string => {
-    return `${url}/`.replace(`/${$locale}/`, `/${newLang}/`);
-  };
+    return `${url}`.replace(`/${$locale}/`, `/${newLang}/`)
 </script>
 
 <div class="btn-group ms-4" role="group" aria-label="select language">
