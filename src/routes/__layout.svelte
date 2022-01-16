@@ -12,12 +12,25 @@
 
 <script lang="ts">
   import GoToMainContent from '$lib/components/GoToMainContent.svelte'
-  import { screen } from '$lib/stores'
+  import { prefersReducedMotion, screen } from '$lib/stores'
 
   import '../styles/global.scss'
 
   let windowHeight: number
   let windowWidth: number
+
+  const setPrefersReducedMotion = (): void => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const withoutAnimation = !mediaQuery || mediaQuery.matches
+    prefersReducedMotion.set(withoutAnimation)
+
+    mediaQuery.addEventListener("change", () => {
+      const withoutAnimation = mediaQuery.matches
+      prefersReducedMotion.set(withoutAnimation)
+    });
+  }
+
+  setPrefersReducedMotion()
 
   $: {
     screen.update(() => ({
