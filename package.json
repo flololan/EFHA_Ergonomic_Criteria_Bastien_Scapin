@@ -42,7 +42,9 @@
   },
   "type": "module",
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^5.1.3",
+    "countup.js": "^2.0.8",
     "showdown": "^1.9.1"
   }
 }
