@@ -13,6 +13,6 @@ To do this, the site must comply with the standards in force at the time of its 
 
 ----
 
-## Declaration of conformity to the ggaa
+## Declaration of conformity to the GGAA
 
 This site is not officially compliant but tries to be as much as possible within the framework of a study project.

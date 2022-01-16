@@ -13,6 +13,6 @@ Pour cela, le site doit respecter les normes en vigueur lors de sa réalisation 
 
 ----
 
-## Déclaration de conformité au rgaa
+## Déclaration de conformité au GGAA
 
 Ce site n'est pas officiellement conforme mais tente de l'être autant qu'il le peut dans le cadre d'un projet d'étude.
