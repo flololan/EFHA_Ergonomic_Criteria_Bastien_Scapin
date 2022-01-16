@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { dev } from '$app/env'
   import { focusTrap } from 'svelte-focus-trap'
   import { _ } from 'svelte-i18n'
   import CheckLg from '$lib/svg/CheckLg.svelte'
@@ -16,43 +17,42 @@
   }
 </script>
 
-<div
-  class="modal fade show {show ? 'd-block' : ''}"
-  id={MODAL_ID}
-  tabindex="-1"
-  role="alertdialog"
-  aria-modal="true"
-  aria-labelledby={MODAL_TITLE_ID}
-  aria-hidden={show}
-  use:focusTrap
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id={MODAL_TITLE_ID}>
-          {$_('do_you_want_some_cookies')}
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          aria-label={$_('close')}
-          on:click={onClick}
-        />
-      </div>
-      <div class="modal-body">{$_('cookie_banner_description')}</div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-primary" on:click={onClick}>
-          <span class="me-1" aria-hidden="true"><X /></span>
-          {$_('refuse')}
-        </button>
-        <button type="button" class="btn btn-primary" on:click={onClick}>
-          <span class="me-1" aria-hidden="true"><CheckLg /></span>
-          {$_('accept')}
-        </button>
+{#if show}
+  <div
+    class="modal fade show d-block"
+    id={MODAL_ID}
+    tabindex="-1"
+    role="alertdialog"
+    aria-modal="true"
+    aria-labelledby={MODAL_TITLE_ID}
+    aria-hidden={show}
+    use:focusTrap
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id={MODAL_TITLE_ID}>
+            {$_('do_you_want_some_cookies')}
+          </h5>
+          {#if dev}
+            <button type="button" class="btn-close" aria-label={$_('close')} />
+          {/if}
+        </div>
+        <div class="modal-body">{$_('cookie_banner_description')}</div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-primary" on:click={onClick}>
+            <span class="me-1" aria-hidden="true"><X /></span>
+            {$_('refuse')}
+          </button>
+          <button type="button" class="btn btn-primary" on:click={onClick}>
+            <span class="me-1" aria-hidden="true"><CheckLg /></span>
+            {$_('accept')}
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+{/if}
 
 <style lang="scss">
   .modal-dialog {
