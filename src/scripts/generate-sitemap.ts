@@ -9,6 +9,7 @@ const PAGES = [
   "",
   "contact",
   "criteria",
+  "legal-mentions"
 ]
 
 const nav: NavStructure = JSON.parse(fs.readFileSync(`./static${NAVI_HIERARCHY_RESOURCE}`).toString())

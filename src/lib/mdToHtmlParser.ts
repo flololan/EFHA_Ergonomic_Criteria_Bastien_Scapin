@@ -7,6 +7,7 @@ const classMap = {
   h4: 'text-start mt-4',
   ul: 'list-group list-group-flush',
   li: 'list-group-item',
+  hr: 'my-5',
   pre: 'rounded-2',
   blockquote: 'alert alert-warning',
   table: 'table table-striped',

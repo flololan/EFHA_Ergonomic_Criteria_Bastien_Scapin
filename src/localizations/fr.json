@@ -8,6 +8,7 @@
   "email_addresse": "Adresse e-mail",
   "firstname": "Prénom",
   "lastname": "Nom",
+  "legal_mentions": "Mentions légales",
   "localisation": {
     "select_language": "Sélectionner la langue",
     "fr": "Français",
@@ -39,5 +40,11 @@
   "accept": "Accepter",
   "close": "Fermer",
   "cookie_banner_description": "Nous prenons votre vie privées au sérieux... ",
-  "do_you_want_some_cookies": "Voulez-vous des cookies ?"
+  "do_you_want_some_cookies": "Voulez-vous des cookies ?",
+  "footer": {
+    "build_with_love": "Construits avec {love} &nbsp;par",
+    "love": "Amour",
+    "website_is": "Ce site est",
+    "accessibility": "Accessibilité : partiellement conforme"
+  }
 }
