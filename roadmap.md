@@ -8,7 +8,7 @@
 - [x] "Go to content"-Button / Skip-Link
 - [ ] Theme light, Theme High contrast
 - [ ] No/little animation-mode
-- [ ] Cookie-Pop-Up needs to be accessible (Si on utilise pas de cookies juste du text expliquant bla bla, SHOW YOUR MUSCLES)
+- [x] Cookie-Pop-Up needs to be accessible (Si on utilise pas de cookies juste du text expliquant bla bla, SHOW YOUR MUSCLES)
 - [ ] Titre des pages
 
 ## Fonctionnalité spécifique à certaines pages
@@ -54,6 +54,6 @@ Resumé et autre?
 - [ ] ajouter des liens entre les critères dans les descriptions
 
 ### Contenu
-- [ ] Ajouter les commentaires entre les critères
+- [ ] Ajouter les commentaires entre les critères pour chaque critère (partie "discussion")
   - [ ] en francais
   - [ ] en anglais
