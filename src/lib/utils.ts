@@ -7,4 +7,4 @@ export const isEmailValid = (email: string): boolean => {
 /**
  * append the title of the website to the page title
  */
-export const wrapTitle = (preTitle: string): string => `${preTitle} - ${TITLE}`
+export const getPageTitle = (preTitle: string): string => `${preTitle} - ${TITLE}`

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { _ } from 'svelte-i18n'
 
-  import { isEmailValid } from '$lib/utils'
+  import { isEmailValid, getPageTitle } from '$lib/utils'
   import MessageSentSuccess from '$lib/components/MessageSentSuccess.svelte'
   import Footer from '$lib/components/Footer.svelte'
 
@@ -49,7 +49,7 @@
 </script>
 
 <svelte:head>
-  <title>{wrapTitle($_('contact'))}</title>
+  <title>{getPageTitle($_('contact'))}</title>
 </svelte:head>
 
 <main id="mainContent" class="container">
