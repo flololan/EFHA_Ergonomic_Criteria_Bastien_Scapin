@@ -34,5 +34,10 @@
   "edit_this_criterion": "Edit this criterion",
   "on_github": "on Github",
   "previous_criterion": "Previous criteria",
-  "next_criterion": "Next criteria"
+  "next_criterion": "Next criteria",
+  "refuse": "Refuse",
+  "accept": "Accept",
+  "close": "Close",
+  "cookie_banner_description": "We value your privacy... ",
+  "do_you_want_some_cookies": "Do you want some cookies ?"
 }

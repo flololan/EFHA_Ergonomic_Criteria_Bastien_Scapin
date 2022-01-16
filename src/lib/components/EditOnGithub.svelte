@@ -11,7 +11,7 @@
 </script>
 
 <a
-  class="edit-link d-flex align-items-center position-absolute top-0 end-0 mt-4 me-3 btn btn-outline-dark"
+  class="edit-link d-flex align-items-center position-absolute top-0 end-0 ms-1 me-5 btn btn-outline-dark"
   {href}
   target="_blank"
 >
@@ -23,8 +23,12 @@
 
 <style lang="scss">
   .edit-link {
+    margin-top: 2rem;
     width: max-content;
-    transform: translateX(100%);
+
+    @media screen and (min-width: 1400px) {
+      transform: translateX(100%);
+    }
   }
 
   a:hover .github-logo {

@@ -5,5 +5,5 @@ register('fr', () => import('./localizations/fr.json'))
 
 init({
   fallbackLocale: 'en',
-  initialLocale: 'en'
+  initialLocale: 'fr',
 })

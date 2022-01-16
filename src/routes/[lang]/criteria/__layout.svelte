@@ -1,10 +1,10 @@
 <script context="module">
-  import { NAVI_HIERARCHY_RESOURCE } from '$lib/const';
+  import { NAVI_HIERARCHY_RESOURCE } from '$lib/const'
 
   export async function load({ fetch }) {
-    const navRes = await fetch(NAVI_HIERARCHY_RESOURCE);
+    const navRes = await fetch(NAVI_HIERARCHY_RESOURCE)
     if (navRes.ok) {
-      const nav = await navRes.json();
+      const nav = await navRes.json()
       return {
         props: {
           nav,
@@ -12,7 +12,7 @@
         stuff: {
           nav,
         },
-      };
+      }
     }
 
     return {
@@ -20,29 +20,29 @@
       error: new Error(
         `The documentation for ${NAVI_HIERARCHY_RESOURCE} doesn't exist!`
       ),
-    };
+    }
   }
 </script>
 
 <script lang="ts">
-  import DocNav from '$lib/components/DocNav.svelte';
-  import type { NavStructure } from '$lib/type';
-  import { screen } from '$lib/stores';
-  import ToggleDocNavBtn from '$lib/components/ToggleDocNavBtn.svelte';
+  import DocNav from '$lib/components/DocNav.svelte'
+  import type { NavStructure } from '$lib/type'
+  import { screen } from '$lib/stores'
+  import ToggleDocNavBtn from '$lib/components/ToggleDocNavBtn.svelte'
 
-  export let nav: NavStructure;
+  export let nav: NavStructure
 
-  let showSidebar = $screen.device === 'computer';
-  let device = $screen.device;
+  let showSidebar = $screen.device === 'computer'
+  let device = $screen.device
 
   screen.subscribe((value) => {
     if (value.device !== device) {
       if (value.device === 'computer') {
-        showSidebar = true;
+        showSidebar = true
       }
-      device = value.device;
+      device = value.device
     }
-  });
+  })
 </script>
 
 <div class="d-flex position-relative" style="height: 100%; overflow: hidden">
