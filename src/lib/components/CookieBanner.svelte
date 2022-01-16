@@ -35,28 +35,17 @@
         <button
           type="button"
           class="btn-close"
-          data-bs-dismiss="modal"
           aria-label={$_('close')}
           on:click={onClick}
         />
       </div>
       <div class="modal-body">{$_('cookie_banner_description')}</div>
       <div class="modal-footer border-0">
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-bs-dismiss="modal"
-          on:click={onClick}
-        >
+        <button type="button" class="btn btn-primary" on:click={onClick}>
           <span class="me-1" aria-hidden="true"><X /></span>
           {$_('refuse')}
         </button>
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-bs-dismiss="modal"
-          on:click={onClick}
-        >
+        <button type="button" class="btn btn-primary" on:click={onClick}>
           <span class="me-1" aria-hidden="true"><CheckLg /></span>
           {$_('accept')}
         </button>
@@ -72,5 +61,10 @@
     margin: 0 auto;
     right: 0;
     left: 0;
+  }
+
+  .modal-title::before,
+  .modal-title::after {
+    content: '🍪';
   }
 </style>
