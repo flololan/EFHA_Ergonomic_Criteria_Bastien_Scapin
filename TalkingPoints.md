@@ -2,3 +2,4 @@
 - Emoji in text
 - dyslexia-friendly font
 - contact-form
+- Ancres pour les titres d'une page
