@@ -31,13 +31,13 @@
 </script>
 
 <section class="stats container mt-5">
-  <h2 class="mt-5 fs-3">
+  <h2 class="mt-5 fs-3 mb-3">
     {$_('homepage.stats_title')}
   </h2>
 
-  <div class="row pb-5 mb-5">
+  <ul class="row pb-5 mb-5 list-unstyled">
     {#each STATS as { icon, value, unit, label, colorType }, index}
-      <div class="col-12 col-md-4">
+      <li class="col-12 col-md-4">
         <div
           class="d-flex py-3 my-3 my-lg-0 justify-content-center"
           data-aos={!$prefersReducedMotion && "zoom-in-up"}
@@ -53,9 +53,9 @@
             </p>
           </div>
         </div>
-      </div>
+      </li>
     {/each}
-  </div>
+  </ul>
 </section>
 
 <style>
