@@ -2,9 +2,9 @@ import showdown from "showdown"
 
 const classMap = {
   h1: 'text-start mt-5 mt-xxl-0',
-  h2: 'text-start',
-  h3: 'text-start mt-5',
-  h4: 'text-start mt-4',
+  h2: 'text-start mt-5',
+  h3: 'text-start mt-4',
+  h4: 'text-start mt-3',
   ul: 'list-group list-group-flush',
   li: 'list-group-item',
   hr: 'my-5',
