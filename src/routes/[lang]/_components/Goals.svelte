@@ -41,7 +41,7 @@
         class="col-sm-4 text-center text-md-start mt-2"
         data-aos={!$prefersReducedMotion && "fade-up"}
       >
-        <span role="img" alt="">
+        <span aria-hidden="true">
           <svelte:component this={icon} />
         </span>
         <h3 class="text-dark mb-3 mt-4 fw-bold fs-4">

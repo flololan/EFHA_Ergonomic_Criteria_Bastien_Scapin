@@ -42,7 +42,7 @@
           class="d-flex py-3 my-3 my-lg-0 justify-content-center"
           data-aos={!$prefersReducedMotion && "zoom-in-up"}
         >
-          <div class={`me-2 text-${colorType}`}>
+          <div class={`me-2 text-${colorType}`} aria-hidden="true">
             <svelte:component this={icon} />
           </div>
           <div>
