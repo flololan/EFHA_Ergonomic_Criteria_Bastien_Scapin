@@ -31,7 +31,9 @@
 </script>
 
 <section class="stats container mt-5">
-  <h2 class="mt-5 fs-3">Le guide en statistique</h2>
+  <h2 class="mt-5 fs-3">
+    {$_('homepage.stats_title')}
+  </h2>
 
   <div class="row pb-5 mb-5">
     {#each STATS as { icon, value, unit, label, colorType }, index}

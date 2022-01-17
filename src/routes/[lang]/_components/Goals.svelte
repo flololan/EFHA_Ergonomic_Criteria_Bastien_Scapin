@@ -1,24 +1,26 @@
 <script lang="ts">
-  import Heart from "$lib/svg/Heart.svelte";
-  import Lightning from "$lib/svg/Lightning.svelte";
-  import ShieldCheck from "$lib/svg/ShieldCheck.svelte";
-  import { prefersReducedMotion } from "$lib/stores";
+  import { _ } from "svelte-i18n"
 
-  const CRITERIA = [
+  import Heart from "$lib/svg/Heart.svelte"
+  import Lightning from "$lib/svg/Lightning.svelte"
+  import ShieldCheck from "$lib/svg/ShieldCheck.svelte"
+  import { prefersReducedMotion } from "$lib/stores"
+
+  $: CRITERIA = [
     {
       icon: ShieldCheck,
-      title: "Efficacité",
-      text: "L’internaute doit réussir à réaliser l’action pour laquelle il a pénétré sur le site web de manière simple."
+      title: $_('homepage.criteria.efficiency.title'),
+      text: $_('homepage.criteria.efficiency.text')
     },
     {
       icon: Lightning,
-      title: "Efficient",
-      text: "L’internaute doit pouvoir effectuer ses actions rapidement et de manière intuitive avec le moins d’erreurs possible."
+      title: $_('homepage.criteria.efficient.title'),
+      text: $_('homepage.criteria.efficient.text')
     },
     {
       icon: Heart,
-      title: "Satisfaction",
-      text: "Les internautes doivent être satisfaits une fois leur action terminée et réalisée avec succès."
+      title: $_('homepage.criteria.satisfaction.title'),
+      text: $_('homepage.criteria.satisfaction.text')
     }
   ]
 </script>
@@ -27,9 +29,9 @@
   <div class="row">
     <div class="col-12">
       <h2 class="text-dark mb-5 fs-3">
-        <span class="fw-light fs-5">Ce guide va vous aider à</span>
+        <span class="fw-light fs-5">{$_('homepage.goals.helps_to')}</span>
         <br>
-        Rendre votre site <b>utilisable</b>.
+        {$_('homepage.goals.make_usable')}
       </h2>
     </div>
   </div>

@@ -15,7 +15,26 @@
     "goto_criteria": "Consulter les critères",
     "satisfied_client" : "Clients satisfaits",
     "team" : "Membres de l'équipe",
-    "criteria_to_explore" : "Critères à explorer"
+    "criteria_to_explore" : "Critères à explorer",
+    "stats_title" : "Le guide en statistiques",
+    "goals" : {
+      "helps_to" : "Ce guide vous aidera à",
+      "make_usable" : "Rendre votre site utilisable."
+    },
+    "criteria" : {
+      "efficiency" : {
+        "title" : "Efficacité ",
+        "text" : "L'utilisateur doit pouvoir effectuer l'action pour laquelle il est entré sur le site web de manière simple."
+      },
+      "efficient" : {
+        "title" : "Efficient",
+        "text" : "L'internaute doit pouvoir réaliser ses actions de manière rapide et intuitive, avec le moins d'erreurs possible."
+      },
+      "satisfaction" : {
+        "title" : "Satisfaction",
+        "text" : "Les internautes doivent être satisfaits une fois que leur action a été menée à bien."
+      }
+    }
   },
   "localisation": {
     "select_language": "Sélectionner la langue",
