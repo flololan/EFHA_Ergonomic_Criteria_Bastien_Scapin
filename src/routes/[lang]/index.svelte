@@ -32,7 +32,7 @@
     href={`/${$locale}/criteria`} class="btn btn-outline-primary btn-lg rounded-pill align-self-center"
     data-aos={!$prefersReducedMotion && "flip-left"}
   >
-    Consulter les critères
+    {$_('homepage.goto_criteria')}
   </a>
 </div>
 
