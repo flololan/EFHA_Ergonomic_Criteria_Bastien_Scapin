@@ -26,11 +26,11 @@
 <section id="goals" class="container">
   <div class="row">
     <div class="col-12">
-      <h3 class="text-dark mb-5">
+      <h2 class="text-dark mb-5 fs-3">
         <span class="fw-light fs-5">Ce guide va vous aider à</span>
         <br>
         Rendre votre site <b>utilisable</b>.
-      </h3>
+      </h2>
     </div>
   </div>
   <ul class="row aos-init aos-animate list-unstyled">
@@ -42,9 +42,9 @@
         <span role="img" alt="">
           <svelte:component this={icon} />
         </span>
-        <h4 class="text-dark mb-3 mt-4 fw-bold fs-4">
+        <h3 class="text-dark mb-3 mt-4 fw-bold fs-4">
           {title}
-        </h4>
+        </h3>
         <p>
           {text}
         </p>

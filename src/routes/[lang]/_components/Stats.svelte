@@ -31,6 +31,8 @@
 </script>
 
 <section class="stats container mt-5">
+  <h2 class="mt-5 fs-3">Le guide en statistique</h2>
+
   <div class="row pb-5 mb-5">
     {#each STATS as { icon, value, unit, label, colorType }, index}
       <div class="col-12 col-md-4">
@@ -42,12 +44,11 @@
             <svelte:component this={icon} />
           </div>
           <div>
-            <h4 class="font-weight-bold text-dark mb-0">
-
+            <p class="font-weight-bold text-dark mb-0 fs-4 lh-1">
               <span class="countup fw-bold" id={value.toString()}>{value}</span>{#if unit}{unit}{/if}
               <br>
               <span class="fs-5">{label}</span>
-            </h4>
+            </p>
           </div>
         </div>
       </div>
