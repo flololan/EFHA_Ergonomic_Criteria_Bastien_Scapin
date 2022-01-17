@@ -4,5 +4,7 @@
 
 ## Importance de l'accessibilité dans le développement web
 
+→ cf: synthèse
+
 ## Liens entre ces critères et l'accessibilité
 
