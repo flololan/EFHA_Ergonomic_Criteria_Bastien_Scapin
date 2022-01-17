@@ -9,31 +9,41 @@
   $: path = $page.url.pathname
 </script>
 
-<footer class="d-flex flex-column align-items-center mt-5 mx-0 py-4 px-1 px-md-5 bg-light">
+<footer class="d-flex flex-column align-items-center mt-5 mx-0 py-4 px-1 px-md-5 text-white">
   <ul class="d-flex ms-0 ps-0 mb-0">
     <Links {path} />
   </ul>
 
   <p class="mb-3 text-center">
-    <a href={`/${$locale}/assure/accessibility`} class="link-dark">
+    <a href={`/${$locale}/assure/accessibility`} class="link-light">
       {$_('footer.accessibility')}
     </a>
     | 
-    <a href={`/${$locale}/legal-mentions`} class="link-dark">
+    <a href={`/${$locale}/legal-mentions`} class="link-light">
       {$_('legal_mentions')}
     </a>
   </p>
-  <p class="mb-0 ms-2 text-center">
+  <p class="mb-0 ms-2 text-center fw-light">
     {@html $_('footer.build_with_love', { values: { 
       love: `<span aria-label="${$_('footer.love')}" role="img">❤️</span>`
     }})}
 
     {#each DEVS as { name, link }, index}
-      <a href={link} target="_blank">{name}</a>{#if index < DEVS.length - 1},&nbsp;{/if}
+      <a href={link} target="_blank" class="link-light">{name}</a>{#if index < DEVS.length - 1},&nbsp;{/if}
     {/each}
   </p>
-  <p class="mt-3 ms-2">
+  <p class="mt-3 ms-2 fw-lighter">
     {$_('footer.website_is')}
-    <a href={REPO_LINK} target="_blank">open source</a>.
+    <a href={REPO_LINK} target="_blank" class="link-light">open source</a>.
   </p>
 </footer>
+
+<style>
+  footer {
+    background: #4D49E3;
+  }
+
+  footer :global(a) {
+    color: white !important;
+  }
+</style>

@@ -9,6 +9,33 @@
   "firstname": "First name",
   "lastname": "Last name",
   "legal_mentions": "Legal Mentions",
+  "homepage": {
+    "title": "Ergonomics at the service of your users",
+    "subtitle": "Improve the user experience of your website by applying these different ergonomic criteria:",
+    "goto_criteria": "Consult the criteria",
+    "satisfied_client": "Satisfied clients",
+    "team": "Team members",
+    "criteria_to_explore": "Criteria to explore",
+    "stats_title": "The guide in statistics",
+    "goals": {
+      "helps_to": "This guide will help you to",
+      "make_usable": "Make your site usable."
+    },
+    "criteria": {
+      "efficiency": {
+        "title": "Efficiency",
+        "text": "The user must be able to perform the action for which he entered the website in a simple way."
+      },
+      "efficient": {
+        "title": "Efficient",
+        "text": "The Internet user must be able to carry out his actions quickly and intuitively with as few errors as possible."
+      },
+      "satisfaction": {
+        "title": "Satisfaction",
+        "text": "Internet users must be satisfied once their action has been successfully completed."
+      }
+    }
+  },
   "localisation": {
     "select_language": "Select language",
     "fr": "French",

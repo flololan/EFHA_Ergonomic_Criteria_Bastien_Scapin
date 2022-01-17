@@ -16,7 +16,6 @@ const createScreenStore = () => {
   }
 }
 
-export const screen = createScreenStore()
 
 interface AvailibityStore {
   isFocusTrapAvailable: boolean;
@@ -34,4 +33,17 @@ const createAvailabilityStore = () => {
   }
 }
 
+const createMotionReduceStore = () => {
+  const { subscribe, update, set } = writable<boolean>(true)
+
+  return {
+    subscribe,
+    update,
+    set
+  }
+}
+
+
+export const screen = createScreenStore()
 export const availabilityStore = createAvailabilityStore()
+export const prefersReducedMotion = createMotionReduceStore()

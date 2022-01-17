@@ -17,7 +17,7 @@
       aria-hidden={$locale === lang}
       tabindex={$locale === lang ? -1 : 0}
     >
-      <img src={`/assets/flag_${lang}.svg`} alt="" />
+      <img src={`/assets/flag_${lang}.svg`} alt="" class="rounded" />
     </a>
   {/each}
 </div>
