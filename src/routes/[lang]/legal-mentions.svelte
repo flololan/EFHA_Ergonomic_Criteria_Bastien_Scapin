@@ -7,8 +7,8 @@
           md: await res.text(),
           slug: params.filename,
           nav: stuff.nav,
-        },
-      };
+        }
+      }
     }
 
     return {
@@ -16,7 +16,7 @@
       error: new Error(
           `Impossible to fetch the content for this page!`
       ),
-    };
+    }
   }
 </script>
 

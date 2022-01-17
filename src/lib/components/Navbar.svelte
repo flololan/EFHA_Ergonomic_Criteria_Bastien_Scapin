@@ -1,7 +1,7 @@
 <script lang="ts">
+    import { _ } from 'svelte-i18n';
     import { page } from '$app/stores';
 
-    import { _ } from 'svelte-i18n';
     import { TITLE } from '$lib/const';
 
     import LocalisationSelect from './LocalisationSelect.svelte';

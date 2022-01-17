@@ -4,6 +4,10 @@ export const isEmailValid = (email: string): boolean => {
   return EMAIL_REGEX.test(String(email).toLowerCase());
 }
 
+export const getUrlWithUpdatedLang = (url: string, lang: string, newLang: string): string => {
+  return `${url}`.replace(`/${lang}/`, `/${newLang}/`)
+}
+
 /**
  * append the title of the website to the page title
  */
