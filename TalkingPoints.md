@@ -3,3 +3,6 @@
 - dyslexia-friendly font
 - contact-form
 - Ancres pour les titres d'une page
+- Evaluated with WAVE
+  - 2 linked image missing alternative text
+  - 30 very low constrast → lien dans les critères de navigation
