@@ -75,5 +75,9 @@
     "website_is": "This website is",
     "accessibility": "Accessibility: partially compliant"
   },
-  "criterion": "Criterion"
+  "criterion": "Criterion",
+  "settings_page": {
+    "reduced_motion": "Minimize the amount of non-essential motion",
+    "dyslexic_mode": "Use a dyslexia-friendly font"
+  }
 }

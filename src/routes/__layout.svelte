@@ -12,14 +12,19 @@
 
 <script lang="ts">
   import GoToMainContent from '$lib/components/GoToMainContent.svelte'
-  import { prefersReducedMotion, screen } from '$lib/stores'
+  import { dyslexicMode, prefersReducedMotion, screen } from '$lib/stores'
 
   import '../styles/global.scss'
 
   let windowHeight: number
   let windowWidth: number
 
-  const setPrefersReducedMotion = (): void => {
+  const initPrefersReducedMotionStore = (): void => {
+    // bind prefersReducedMotion to localStorage
+    prefersReducedMotion.subscribe((value) => {
+      window.localStorage.setItem('prefersReducedMotion', JSON.stringify(value));
+    })
+
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     let storedValue = window.localStorage.getItem('prefersReducedMotion')
     prefersReducedMotion.set(storedValue ? JSON.parse(storedValue) : false)
@@ -30,7 +35,16 @@
     });
   }
 
-  setPrefersReducedMotion()
+    const initDyslexicModeStore = (): void => {
+    // bind dyslexicMode to localStorage
+    dyslexicMode.subscribe((value) => {
+      window.localStorage.setItem('dyslexicMode', JSON.stringify(value));
+    })
+
+    let storedValue = window.localStorage.getItem('dyslexicMode')
+    dyslexicMode.set(storedValue ? JSON.parse(storedValue) : false)
+  }
+
 
   $: {
     screen.update(() => ({
@@ -40,10 +54,8 @@
     }))
   }
 
-  // bind prefersReducedMotion to localStorage
-  prefersReducedMotion.subscribe((value) => {
-    window.localStorage.setItem('prefersReducedMotion', JSON.stringify(value));
-  })
+  initPrefersReducedMotionStore()
+  initDyslexicModeStore()
 </script>
 
 <svelte:window bind:innerHeight={windowHeight} bind:innerWidth={windowWidth} />
