@@ -21,8 +21,8 @@
 
   const setPrefersReducedMotion = (): void => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const withoutAnimation = !mediaQuery || mediaQuery.matches
-    prefersReducedMotion.set(withoutAnimation)
+    let storedValue = window.localStorage.getItem('prefersReducedMotion')
+    prefersReducedMotion.set(storedValue ? JSON.parse(storedValue) : false)
 
     mediaQuery.addEventListener("change", () => {
       const withoutAnimation = mediaQuery.matches
@@ -39,6 +39,11 @@
       device: windowWidth >= 768 ? 'computer' : 'mobile',
     }))
   }
+
+  // bind prefersReducedMotion to localStorage
+  prefersReducedMotion.subscribe((value) => {
+    window.localStorage.setItem('prefersReducedMotion', JSON.stringify(value));
+  })
 </script>
 
 <svelte:window bind:innerHeight={windowHeight} bind:innerWidth={windowWidth} />
