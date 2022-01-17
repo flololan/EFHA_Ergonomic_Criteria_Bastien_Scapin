@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { _ } from 'svelte-i18n'
+  import { locale, _ } from 'svelte-i18n'
   import { focusTrap } from 'svelte-focus-trap'
 
   import type { NavStructure } from '$lib/type'
@@ -10,6 +10,8 @@
 
   export let nav: NavStructure
   export let showSidebar = true
+
+  const getCriterionPresentationPageUrl = () => `/${$locale}/criteria`
 
   const handleEscapePress = (event: KeyboardEvent) => {
     if (event.key === 'Escape' && showSidebar && $screen.device === 'mobile') {
@@ -29,7 +31,9 @@
     {#if $availabilityStore.isFocusTrapAvailable && $screen.device === 'mobile'}
       <div use:focusTrap class="h-100">
         <CloseDocNavBtn bind:showSidebar class="top-0 end-0" />
-        <h2 class="pb-3">{$_('criteria')}</h2>
+        <h2 class="pb-3">
+          <a href={getCriterionPresentationPageUrl()}>{$_('criteria')}</a>
+        </h2>
         <div class="h-100 overflow-scroll">
           <DocNavItem
             nav={nav.children}
@@ -44,7 +48,12 @@
     {:else}
       <div class="h-100">
         <CloseDocNavBtn bind:showSidebar class="top-0 end-0" />
-        <h2 class="pb-3">{$_('criteria')}</h2>
+        <h2 class="pb-3">
+          <a
+            class="text-decoration-none"
+            href={getCriterionPresentationPageUrl()}>{$_('criteria')}</a
+          >
+        </h2>
         <div class="h-100 overflow-scroll">
           <DocNavItem
             nav={nav.children}
