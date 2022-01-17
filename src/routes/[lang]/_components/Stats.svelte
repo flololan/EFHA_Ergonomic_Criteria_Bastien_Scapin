@@ -26,7 +26,7 @@
     {
       icon: Peoples,
       colorType: 'danger',
-      value: 142,
+      value: 25,
       label: 'Criteria to explore'
     }
   ]
@@ -46,13 +46,13 @@
   })
 </script>
 
-<div class="stats container">
+<section class="stats container mt-5">
   <div class="row pb-5 mb-5">
     {#each STATS as { icon, value, unit, label, colorType }, index}
       <div class="col-12 col-md-4">
         <div
           class="d-flex py-3 my-3 my-lg-0 justify-content-center"
-          data-aos={!$prefersReducedMotion && index % 2 === 0 ? "zoom-in-up" : "zoom-in-down"}
+          data-aos={!$prefersReducedMotion && "zoom-in-up"}
         >
           <div class={`me-2 text-${colorType}`}>
             <svelte:component this={icon} />
@@ -69,7 +69,7 @@
       </div>
     {/each}
   </div>
-</div>
+</section>
 
 <style>
   .stats :global(svg) {

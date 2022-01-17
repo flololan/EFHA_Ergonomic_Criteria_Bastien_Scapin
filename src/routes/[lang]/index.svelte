@@ -7,8 +7,11 @@
 
   import { TITLE } from '$lib/const'
   import Footer from '$lib/components/Footer.svelte'
+  import { prefersReducedMotion } from '$lib/stores'
+
   import Header from './_components/Header.svelte'
   import Stats from './_components/Stats.svelte'
+  import Goals from './_components/Goals.svelte'
 
   onMount(() => {
     AOS.init()
@@ -20,6 +23,17 @@
 </svelte:head>
 
 <Header />
+<Goals />
+
 <Stats />
+
+<div class="d-flex justify-content-center mb-5">
+  <a
+    href={`/${$locale}/criteria`} class="btn btn-outline-primary btn-lg rounded-pill align-self-center"
+    data-aos={!$prefersReducedMotion && "flip-left"}
+  >
+    Consulter les critères
+  </a>
+</div>
 
 <Footer />
