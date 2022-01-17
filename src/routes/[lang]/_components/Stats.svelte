@@ -7,25 +7,25 @@
   import Peoples from '$lib/svg/Peoples.svelte'
   import { prefersReducedMotion } from '$lib/stores';
 
-  const STATS = [
+  $: STATS = [
     {
       icon: PersonBadge,
       colorType: 'success',
       value: 99.999,
       unit: '%',
-      label: 'Satisfied clients'
+      label: $_('homepage.satisfied_client')
     },
     {
       icon: Peoples,
       colorType: 'info',
       value: 3,
-      label: 'Team members'
+      label: $_('homepage.team')
     },
     {
       icon: Peoples,
       colorType: 'danger',
       value: 25,
-      label: 'Criteria to explore'
+      label: $_('homepage.criteria_to_explore')
     }
   ]
 </script>

@@ -12,7 +12,10 @@
   "homepage": {
     "title": "Ergonomics at the service of your users",
     "subtitle": "Improve the user experience of your website by applying these different ergonomic criteria:",
-    "goto_criteria": "Consult the criteria"
+    "goto_criteria": "Consult the criteria",
+    "satisfied_client": "Satisfied clients",
+    "team": "Team members",
+    "criteria_to_explore": "Criteria to explore"
   },
   "localisation": {
     "select_language": "Select language",

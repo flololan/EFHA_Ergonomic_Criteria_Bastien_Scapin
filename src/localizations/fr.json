@@ -12,7 +12,10 @@
   "homepage": {
     "title": "L'ergonomie au service de vos utilisateurs",
     "subtitle": "Améliorez l'expérience utilisateur de votre site web en appliquant ces différents critères ergonomiques :",
-    "goto_criteria": "Consulter les critères"
+    "goto_criteria": "Consulter les critères",
+    "satisfied_client" : "Clients satisfaits",
+    "team" : "Membres de l'équipe",
+    "criteria_to_explore" : "Critères à explorer"
   },
   "localisation": {
     "select_language": "Sélectionner la langue",
