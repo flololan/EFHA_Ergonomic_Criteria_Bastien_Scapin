@@ -2,11 +2,12 @@
 
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { _, locale } from 'svelte-i18n'
+  import { _ } from 'svelte-i18n'
   import { CountUp } from 'countup.js'
 
   import PersonBadge from '$lib/svg/PersonBadge.svelte'
   import Peoples from '$lib/svg/Peoples.svelte'
+  import { prefersReducedMotion } from '$lib/stores';
 
   const STATS = [
     {
@@ -47,10 +48,11 @@
 
 <div class="stats container">
   <div class="row pb-5 mb-5">
-    {#each STATS as { icon, value, unit, label, colorType }}
+    {#each STATS as { icon, value, unit, label, colorType }, index}
       <div class="col-12 col-md-4">
         <div
           class="d-flex py-3 my-3 my-lg-0 justify-content-center"
+          data-aos={!$prefersReducedMotion && index % 2 === 0 ? "zoom-in-up" : "zoom-in-down"}
         >
           <div class={`me-2 text-${colorType}`}>
             <svelte:component this={icon} />
