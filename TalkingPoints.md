@@ -1,3 +1,2 @@
-- This
-- That
+- prefers-reduce-motion
 - Emoji in text
