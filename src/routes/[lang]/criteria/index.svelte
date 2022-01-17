@@ -7,6 +7,7 @@
     if (contentRes.ok) {
       return {
         props: {
+          lang: params.lang,
           markdownContent: await contentRes.text(),
         },
       }
@@ -24,15 +25,25 @@
   import { getPageTitle } from '$lib/utils'
   import { _ } from 'svelte-i18n'
 
+  export let lang: string
   export let markdownContent: string
 
-  $: html = getMdAsHtml(markdownContent, { pageSlug: '/criteria' })
+  $: html = getMdAsHtml(markdownContent, { pageSlug: `/${lang}/criteria` })
 </script>
 
 <svelte:head>
   <title>{getPageTitle($_('criteria'))}</title>
 </svelte:head>
 
-<article id="mainContent" class="position-relative px-5 pt-4">
+<article
+  id="mainContent"
+  class="criteria-presentation position-relative px-5 pt-4"
+>
   {@html html}
 </article>
+
+<style>
+  .criteria-presentation {
+    max-width: 80ch;
+  }
+</style>
