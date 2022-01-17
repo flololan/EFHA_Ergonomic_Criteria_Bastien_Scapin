@@ -21,6 +21,14 @@
 		href={`/${$locale}/contact`}>{$_("contact")}</a
 	>
 </li>
+<li class="nav-item">
+	<a
+		class="nav-link"
+		class:active={path.endsWith('settings')}
+		rel="prefetch"
+		href={`/${$locale}/settings`}>{$_("settings")}</a
+	>
+</li>
 
 <style>
 	li {
