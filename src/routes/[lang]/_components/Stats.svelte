@@ -1,9 +1,7 @@
 
 
 <script lang="ts">
-  import { onMount } from 'svelte'
   import { _ } from 'svelte-i18n'
-  import { CountUp } from 'countup.js'
 
   import PersonBadge from '$lib/svg/PersonBadge.svelte'
   import Peoples from '$lib/svg/Peoples.svelte'
@@ -13,7 +11,7 @@
     {
       icon: PersonBadge,
       colorType: 'success',
-      value: 100,
+      value: 99.999,
       unit: '%',
       label: 'Satisfied clients'
     },
@@ -30,20 +28,6 @@
       label: 'Criteria to explore'
     }
   ]
-
-  const initCountupAnimation = (): void => {
-    document.querySelectorAll('.countup').forEach((elmt) => {
-      const id = elmt.getAttribute('id') as string
-      const value = Number(elmt.innerHTML)
-
-      const countUp = new CountUp(id, value)
-      countUp.start();
-    })
-  }
-
-  onMount(() => {
-    initCountupAnimation()
-  })
 </script>
 
 <section class="stats container mt-5">
