@@ -7,7 +7,7 @@ export const isEmailValid = (email: string): boolean => {
 export const getUrlWithUpdatedLang = (url: string, lang: string, newLang: string): string => {
   if (url.endsWith('/')) url = url.slice(0, -1)
 
-  return `${url}`.replace(`/${lang}`, `/${newLang}/`)
+  return `${url}`.replace(`/${lang}`, `/${newLang}`)
 }
 
 /**
