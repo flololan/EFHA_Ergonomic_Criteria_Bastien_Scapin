@@ -10,6 +10,7 @@
   - aria-live for dynamic content
 - Ancres pour les titres d'une page
 - le [texte ne doit PAS être justifié](https://www.accede-web.com/notices/editoriale-modele/bonnes-pratiques/ne-pas-justifier-le-texte/), contrairement à ce que nous avons fait au départ
+- Page de crédits
 
 
 ## Améliorations (accessibilité)
