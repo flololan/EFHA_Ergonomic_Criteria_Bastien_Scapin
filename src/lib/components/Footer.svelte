@@ -14,15 +14,23 @@
     <Links {path} />
   </ul>
 
-  <p class="mb-3 text-center">
-    <a href={`/${$locale}/assure/accessibility`} class="link-light">
-      {$_('footer.accessibility')}
-    </a>
-    | 
-    <a href={`/${$locale}/legal-mentions`} class="link-light">
-      {$_('legal_mentions')}
-    </a>
-  </p>
+  <ul class="list-unstyled d-flex mb-3 text-center">
+    <li>
+      <a href={`/${$locale}/assure/accessibility`} class="link-light">
+        {$_('footer.accessibility')}
+      </a>
+    </li>
+    <li>
+      <a href={`/${$locale}/legal-mentions`} class="link-light">
+        {$_('legal_mentions')}
+      </a>
+    </li>
+    <li>
+      <a href={`/${$locale}/credits`} class="link-light">
+        {$_('credits')}
+      </a>
+    </li>
+  </ul>
   <p class="mb-0 ms-2 text-center fw-light">
     {@html $_('footer.build_with_love', { values: { 
       love: `<span aria-label="${$_('footer.love')}" role="img">❤️</span>`
@@ -45,5 +53,11 @@
 
   footer :global(a) {
     color: white !important;
+  }
+
+
+  li:not(:first-child)::before {
+    content: "|";
+    margin: 0 .3rem;
   }
 </style>
