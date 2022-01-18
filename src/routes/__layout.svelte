@@ -13,6 +13,7 @@
 <script lang="ts">
   import GoToMainContent from '$lib/components/GoToMainContent.svelte'
   import { dyslexicMode, prefersReducedMotion, screen } from '$lib/stores'
+  import { DYSLEXIC_CLASSNAME } from '$lib/const';
 
   import '../styles/global.scss'
 
@@ -35,10 +36,18 @@
     });
   }
 
-    const initDyslexicModeStore = (): void => {
+  const initDyslexicModeStore = (): void => {
+    const bodyClassList = document.body.classList
+  
     // bind dyslexicMode to localStorage
     dyslexicMode.subscribe((value) => {
-      window.localStorage.setItem('dyslexicMode', JSON.stringify(value));
+      if (value) {
+        bodyClassList.add(DYSLEXIC_CLASSNAME)
+      } else {
+        bodyClassList.remove(DYSLEXIC_CLASSNAME)
+      }
+
+      window.localStorage.setItem('dyslexicMode', JSON.stringify(value))
     })
 
     let storedValue = window.localStorage.getItem('dyslexicMode')
