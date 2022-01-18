@@ -8,7 +8,7 @@ Originellement publié en 1990, puis mis à jours, [les critères de Bastien et 
 
 ### Efficacité
 
-En utilisant [ces critères ergonomiques][[bastien-scapin], les participants ont statistiquement découvert plus d'obstacles (63%) à l'accessibilité qu'avec le groupe témoin et le groupe ayant la méthode ISO- (48%). Ce constat a été retrouvé [dans une étude de 2004](bastien-scapin-2004) sur l'évaluation de l'efficacité de ces critères ergonomiques avec <span lang="en">l'ISO/DIS 9241-10 Dialogue Principles</span>.
+En utilisant [ces critères ergonomiques][bastien-scapin], les participants ont statistiquement découvert plus d'obstacles (63%) à l'accessibilité qu'avec le groupe témoin et le groupe ayant la méthode ISO- (48%). Ce constat a été retrouvé [dans une étude de 2004](bastien-scapin-2004) sur l'évaluation de l'efficacité de ces critères ergonomiques avec <span lang="en">l'ISO/DIS 9241-10 Dialogue Principles</span>.
 
 ### Limitations
 
