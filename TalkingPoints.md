@@ -5,6 +5,9 @@
 - Emoji in text
 - dyslexia-friendly font
 - contact-form
+  - labels
+  - errors
+  - aria-live for dynamic content
 - Ancres pour les titres d'une page
 - Evaluated with WAVE
   - 2 linked image missing alternative text
@@ -15,4 +18,5 @@
 ## Améliorations (accessibilité)
 
 - afficher où en est l'utilisateur dans la navigation des critères
-- naviguer via les titres rapidement dans les pages de contenu (notamment la page de présentation des critères)
+- menu de naviguation via les titres rapidement dans les pages de contenu (notamment la page de présentation des critères)
+- 
