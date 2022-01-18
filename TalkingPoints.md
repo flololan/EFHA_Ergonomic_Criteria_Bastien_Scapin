@@ -1,3 +1,4 @@
 - prefers-reduce-motion (binding to native OS)
 - Emoji in text
 - dyslexia-friendly font
+- contact-form
