@@ -14,7 +14,7 @@ En utilisant [ces critères ergonomiques][[bastien-scapin], les participants ont
 
 Les critères datent d'avant les années 2000. Une critique justifiée concerne l'obsolescence de ces critères, qui ne sont plus actuels avec les interfaces web modernes.
 
-Néanmoins, ils restent des lignes directrices correctes lors de la conception d'interfaces web. Un point notoire est que ces recommandations sont applicables pour tous type d'utilisateurs, évoqué dans [les liens entre ces critères et l'accessibilité](#liens-entre-ces-critères-et-laccessibilité).
+Néanmoins, ils restent des lignes directrices correctes lors de la conception d'interfaces web. Un point notoire est que ces recommandations sont applicables pour tous type d'utilisateurs, évoqué dans [les liens entre ces critères et l'accessibilité](#liens-entre-ces-critères-et-laccessibilité). Ils semblent être universels !
 
 ## Importance de l'accessibilité dans le développement web
 
@@ -47,6 +47,9 @@ De ces constats de sites web possédant des obstacles à l’accessibilité et d
 ## Liens entre ces critères et l'accessibilité
 
 
+
+Il en résulte que 24 des 25 critères élémentaires sont universels et peuvent s'appliquer à tous les utilisateurs.
+En revanche, nous pouvons constater qu'ils sont d'autant plus important que les personnes possèdent des déficiences.
 
 ## Références
 
