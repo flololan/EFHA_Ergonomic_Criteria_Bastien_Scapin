@@ -46,7 +46,121 @@ De ces constats de sites web possédant des obstacles à l’accessibilité et d
 
 ## Liens entre ces critères et l'accessibilité
 
+### Universalité des critères
 
+<dfn>Universel</dfn> signifie dans notre cadre que le critère élémentaire est applicable à tous les utilisateurs, indépendamment de leur(s) potentielle(s)  déficience(s) ! 
+
+ <table>
+  <caption>Tri des critères élémentaires selon leur universalité ainsi que la justification associée</caption>
+  <tr>
+    <th>Nom du critère</th>
+    <th scope="col">Universel</th>
+    <th scope="col">Non-universel</th>
+    <th scope="col">Justification</th>
+  </tr>
+  <tr>
+    <th scope="row">1.1. Incitation</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">1.2.1. Groupement / Distinction par la localisation</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">1.2.2. Groupement / Distinction par le format</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">1.3. Feedback immédiat</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">1.4. Lisibilité</th>
+    <td></td>
+    <td>✔️</td>
+    <td>Les personnes aveugles ne sont pas affectées par ce critère. En revanche, les personnes ayant des déficiences visuelles sont fortement impactées par ce critère.</td>
+  </tr>
+  <tr>
+    <th scope="row">2.1.1. Concision</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">2.2.2. Actions minimales</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">2.3. Densité informationnelle</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">3.1. Actions explicites</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">3.2. Contrôle Utilisateur</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">4.1. Flexbilité</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">4.2. Prise en compte de l'expérience utilisateur</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">5.1. Protection contre les erreurs</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">5.2. Qualité des messages d'erreurs</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">5.3. Correction des erreurs</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">6. Homogénéité / Cohérence</th>
+    <td>✔️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th scope="row">7. Signifiance des codes et dénominations</th>
+    <td>✔️</td>
+    <td></td>
+    <td>La signifiance des codes et dénominations est même renforcée lorsque un lecteur d'écran est utilisé.</td>
+  </tr>
+</table> 
 
 Il en résulte que 24 des 25 critères élémentaires sont universels et peuvent s'appliquer à tous les utilisateurs.
 En revanche, nous pouvons constater qu'ils sont d'autant plus important que les personnes possèdent des déficiences.
