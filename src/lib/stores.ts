@@ -43,7 +43,18 @@ const createMotionReduceStore = () => {
   }
 }
 
+const dyslexicModeStore = () => {
+  const { subscribe, update, set } = writable<boolean>(true)
+
+  return {
+    subscribe,
+    update,
+    set
+  }
+}
+
 
 export const screen = createScreenStore()
 export const availabilityStore = createAvailabilityStore()
 export const prefersReducedMotion = createMotionReduceStore()
+export const dyslexicMode = dyslexicModeStore()

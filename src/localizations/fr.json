@@ -3,6 +3,7 @@
   "icon_alt": "Guide pour rendre votre site ergonomique | {website} (retour à l'accueil)",
   "criteria": "Critères",
   "contact": "Contact",
+  "settings": "Paramètres",
   "goto_main_content": "Aller au contenu principal",
   "goto_home_page": "Aller à la page principale",
   "email_addresse": "Adresse e-mail",
@@ -74,5 +75,9 @@
     "website_is": "Ce site est",
     "accessibility": "Accessibilité : partiellement conforme"
   },
-  "criterion": "Critère"
+  "criterion": "Critère",
+  "settings_page" : {
+    "reduced_motion" : "Minimiser la quantité d'animations non essentiels",
+    "dyslexic_mode" : "Utiliser une police adaptée à la dyslexie"
+  }
 }

@@ -24,3 +24,5 @@ export const EMAIL_REGEX = /[^@\s]+@[^@\s]+\.[^@\s]+/
 export const REPO_LINK = 'https://github.com/flololan/EFHA_Ergonomic_Criteria_Bastien_Scapin'
 
 export const EDIT_CRITERIA_ROOT_PATH = `${REPO_LINK}/edit/main/static/contents`
+
+export const DYSLEXIC_CLASSNAME = 'dyslexic-help'
