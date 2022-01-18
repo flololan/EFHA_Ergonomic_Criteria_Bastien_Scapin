@@ -34,7 +34,7 @@ const createAvailabilityStore = () => {
 }
 
 const createMotionReduceStore = () => {
-  const { subscribe, update, set } = writable<boolean>(true)
+  const { subscribe, update, set } = writable<boolean | null>(null)
 
   return {
     subscribe,
@@ -44,7 +44,7 @@ const createMotionReduceStore = () => {
 }
 
 const dyslexicModeStore = () => {
-  const { subscribe, update, set } = writable<boolean>(true)
+  const { subscribe, update, set } = writable<boolean | null>(null)
 
   return {
     subscribe,

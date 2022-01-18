@@ -23,7 +23,9 @@
   const initPrefersReducedMotionStore = (): void => {
     // bind prefersReducedMotion to localStorage
     prefersReducedMotion.subscribe((value) => {
-      window.localStorage.setItem('prefersReducedMotion', JSON.stringify(value));
+      if (value !== null) {
+        window.localStorage.setItem('prefersReducedMotion', JSON.stringify(value));
+      }
     })
 
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -41,16 +43,18 @@
   
     // bind dyslexicMode to localStorage
     dyslexicMode.subscribe((value) => {
-      if (value) {
-        bodyClassList.add(DYSLEXIC_CLASSNAME)
-      } else {
-        bodyClassList.remove(DYSLEXIC_CLASSNAME)
+      if (value !== null) {
+        if (value) {
+          bodyClassList.add(DYSLEXIC_CLASSNAME)
+        } else {
+          bodyClassList.remove(DYSLEXIC_CLASSNAME)
+        }
+        window.localStorage.setItem('dyslexicMode', JSON.stringify(value))
       }
-
-      window.localStorage.setItem('dyslexicMode', JSON.stringify(value))
     })
 
     let storedValue = window.localStorage.getItem('dyslexicMode')
+
     dyslexicMode.set(storedValue ? JSON.parse(storedValue) : false)
   }
 
