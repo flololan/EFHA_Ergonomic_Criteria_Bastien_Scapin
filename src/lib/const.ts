@@ -17,6 +17,8 @@ export const DEVS = [
   }
 ]
 
+/** `/[lang].md` should be added to fetch this ressource */
+export const CRITERIA_PRESENTATION_PAGE = '/contents'
 export const NAVI_HIERARCHY_RESOURCE = "/content-index.json";
 
 export const EMAIL_REGEX = /[^@\s]+@[^@\s]+\.[^@\s]+/
