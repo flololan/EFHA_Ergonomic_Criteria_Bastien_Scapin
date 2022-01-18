@@ -39,11 +39,6 @@
 </nav>
 
 <style lang="scss">
-    .navbar {
-        position: relative;
-        display: block;
-    }
-
     p {
         line-height: 2.5em;
     }
