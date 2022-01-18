@@ -30,7 +30,7 @@
     href={`/${$locale}/settings`}
 		aria-label={$_('settings')}
   >
-    <span class="d-md-none">
+    <span class="d-md-none" aria-hidden="true">
       <Gear />
     </span>
     <span class="d-none d-md-inline">
