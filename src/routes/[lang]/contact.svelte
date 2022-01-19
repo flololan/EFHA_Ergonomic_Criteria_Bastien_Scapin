@@ -73,7 +73,7 @@
             class="form-control"
             class:is-invalid={isSubmitted && errors.firstName}
             id="firstnameInput"
-            placeholder="David"
+            placeholder=" "
             minlength={MIN_NAME_LENGTH}
             required
             aria-describedby="lastnameInput invalidFirstname"
@@ -99,7 +99,7 @@
             class="form-control"
             class:is-invalid={isSubmitted && errors.lastName}
             id="lastnameInput"
-            placeholder="Latence"
+            placeholder=" "
             minlength={MIN_NAME_LENGTH}
             required
             aria-describedby="lastnameInput invalidLastname"
@@ -126,7 +126,7 @@
         class="form-control"
         class:is-invalid={isSubmitted && errors.email}
         id="emailInput"
-        placeholder="name@email.com"
+        placeholder=" "
         pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
         required
         aria-describedby="emailInput invalidEmail"
@@ -149,7 +149,7 @@
         class:is-invalid={isSubmitted && errors.message}
         id="messageInput"
         style="height: 100px"
-        placeholder="just a message"
+        placeholder=" "
         minlength={MIN_MESSAGE_LENGTH}
         required
         aria-describedby="messageInput invalidMessage"
