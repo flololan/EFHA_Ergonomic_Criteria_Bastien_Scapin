@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { _ } from 'svelte-i18n'
+  import { locale, _ } from 'svelte-i18n'
   import { page } from '$app/stores'
 
   import { TITLE } from '$lib/const'
@@ -22,7 +22,7 @@
       rel="prefetch"
       class="p-0 d-flex align-contents-center link-dark"
       aria-label={logoAlt}
-      href="/"
+      href={`/${$locale?.slice(0, 2)}`}
     >
       <img
         src="/assets/icon.svg"
