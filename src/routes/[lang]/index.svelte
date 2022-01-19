@@ -23,17 +23,20 @@
 </svelte:head>
 
 <Header />
-<Goals />
+<main role="main">
+  <Goals />
 
-<Stats />
+  <Stats />
 
-<div class="d-flex justify-content-center mb-5">
-  <a
-    href={`/${$locale}/criteria`} class="btn btn-outline-primary btn-lg rounded-pill align-self-center"
-    data-aos={!$prefersReducedMotion && "flip-left"}
-  >
-    {$_('homepage.goto_criteria')}
-  </a>
-</div>
+  <div class="d-flex justify-content-center mb-5">
+    <a
+      href={`/${$locale}/criteria`}
+      class="btn btn-outline-primary btn-lg rounded-pill align-self-center"
+      data-aos={!$prefersReducedMotion && 'flip-left'}
+    >
+      {$_('homepage.goto_criteria')}
+    </a>
+  </div>
+</main>
 
 <Footer />
