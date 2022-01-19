@@ -35,10 +35,7 @@
   <title>{getPageTitle($_('criteria'))}</title>
 </svelte:head>
 
-<article
-  id="mainContent"
-  class="criteria-presentation position-relative px-5 pt-4"
->
+<article class="criteria-presentation position-relative px-5 pt-4">
   {@html html}
 </article>
 
