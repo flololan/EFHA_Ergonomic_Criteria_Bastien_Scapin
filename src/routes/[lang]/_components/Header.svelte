@@ -1,6 +1,6 @@
 <script lang="ts">
   import { _, locale } from 'svelte-i18n'
-  import { prefersReducedMotion } from '$lib/stores';
+  import { prefersReducedMotion } from '$lib/stores'
 </script>
 
 <header id="mainContent" class="position-relative">
@@ -9,7 +9,7 @@
       <div class="col-sm-12">
         <div class="main-banner">
           <div class="d-sm-flex justify-content-between">
-            <div data-aos={!$prefersReducedMotion && "zoom-in-up"}>
+            <div data-aos={!$prefersReducedMotion && 'zoom-in-up'}>
               <div class="banner-title">
                 <h1 class="font-weight-medium">{$_('homepage.title')}</h1>
               </div>
@@ -23,9 +23,9 @@
             <div class="mt-5 mt-lg-0">
               <img
                 src="/assets/banner-illustration.png"
-                alt="marsmello"
+                alt=""
                 class="img-fluid"
-                data-aos={!$prefersReducedMotion && "zoom-in-up"}
+                data-aos={!$prefersReducedMotion && 'zoom-in-up'}
               />
             </div>
           </div>
