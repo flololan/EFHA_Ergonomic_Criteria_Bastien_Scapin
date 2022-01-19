@@ -31,9 +31,9 @@
     {#if $availabilityStore.isFocusTrapAvailable && $screen.device === 'mobile'}
       <div use:focusTrap class="h-100">
         <CloseDocNavBtn bind:showSidebar class="top-0 end-0" />
-        <h2 class="pb-3">
-          <a href={getCriterionPresentationPageUrl()}>{$_('criteria')}</a>
-        </h2>
+        <a class="fs-1" href={getCriterionPresentationPageUrl()}>
+          {$_('criteria')}
+        </a>
         <div class="h-100 overflow-scroll">
           <DocNavItem
             nav={nav.children}
