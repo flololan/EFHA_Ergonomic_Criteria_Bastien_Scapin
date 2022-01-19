@@ -14,7 +14,7 @@
     <Links {path} />
   </ul>
 
-  <ul class="list-unstyled d-flex mb-3 text-center">
+  <ul class="list-unstyled d-flex flex-wrap justify-content-center mb-3 text-center">
     <li>
       <a href={`/${$locale}/assure/accessibility`} class="link-light">
         {$_('footer.accessibility')}
