@@ -10,6 +10,7 @@
   "firstname": "Prénom",
   "lastname": "Nom",
   "legal_mentions": "Mentions légales",
+  "credits": "Crédits",
   "homepage": {
     "title": "L'ergonomie au service de vos utilisateurs",
     "subtitle": "Améliorez l'expérience utilisateur de votre site web en appliquant ces différents critères ergonomiques :",
