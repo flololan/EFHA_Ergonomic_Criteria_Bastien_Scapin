@@ -6,6 +6,8 @@
 
 --> [Theme template](https://www.bootstrapdash.com/demo/marshmallow/)
 
+--> [accede-web](http://www.accede-web.com/)
+
 ### Objectifs pédagogiques du projet de réalisation d'un minisite et d'un exposéObjectifs pédagogiques du projet de réalisation d'un minisite et d'un exposé
 Mettre en pratique les connaissances acquises lors du cours.
 Approfondir les recherches sur un thème précis, en rapport avec l'accessibilité numérique.
