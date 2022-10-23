@@ -7,4 +7,4 @@ Quatres sous-critères participent au *Guidage*: *Incitation*, *Groupement/Disti
 
 ## Justification(s)
 
-Un bon guidage facilite l'apprentissage et l'utilisation du système en permettant à l'utilisateur: de savoir, á tout moment, où il se trouve dans une séquence d'interactions, ou dans l'accomplissement d'une tâche ; de connaître les actions permises ainsi que leurs conséquences ; et d'obtenir de l'information supplémentaire (éventuellement sur demande). La facilité d'apprentissage et d'utilisation qui s'ensuivent conduisent à de meilleures performances et occasionnent moins d'erreurs.
+Un bon guidage facilite l'apprentissage et l'utilisation du système en permettant à l'utilisateur: de savoir, à tout moment, où il se trouve dans une séquence d'interactions, ou dans l'accomplissement d'une tâche ; de connaître les actions permises ainsi que leurs conséquences ; et d'obtenir de l'information supplémentaire (éventuellement sur demande). La facilité d'apprentissage et d'utilisation qui s'ensuivent conduisent à de meilleures performances et occasionnent moins d'erreurs.
