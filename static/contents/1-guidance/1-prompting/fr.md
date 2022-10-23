@@ -2,7 +2,7 @@
 
 ## Définition
 
-Le terme *Incitation* a ici une définition plus large que celle qu'on lui confère généralement. Ce critère recouvre les moyens mis en oeuvre pour amener les utilisateurs à effectuer des actions spécifiques, qu'il s'agisse d'entrée de données ou autre. Ce critère englobe aussi tous les mécanismes ou moyens faisant connaître aux utilisateurs les laternatives, lorsque plusieurs actions sont possibles, selon les états ou contextes dans lesquels ils se trouvents. L'*Incitation* concerne également les informations permettant aux utilisateurs de savoir où ils en sont, d'identifier l'état ou contexte dans lequel ils se trouvent, de même que les outils d'aide et leur accessibilité.
+Le terme *Incitation* a ici une définition plus large que celle qu'on lui confère généralement. Ce critère recouvre les moyens mis en oeuvre pour amener les utilisateurs à effectuer des actions spécifiques, qu'il s'agisse d'entrée de données ou autre. Ce critère englobe aussi tous les mécanismes ou moyens faisant connaître aux utilisateurs les alternatives, lorsque plusieurs actions sont possibles, selon les états ou contextes dans lesquels ils se trouvents. L'*Incitation* concerne également les informations permettant aux utilisateurs de savoir où ils en sont, d'identifier l'état ou contexte dans lequel ils se trouvent, de même que les outils d'aide et leur accessibilité.
 
 ## Justification(s)
 
